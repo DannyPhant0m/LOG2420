@@ -1,0 +1,40 @@
+body{
+    
+}
+
+#PHAROS{
+    border-width: 0px;
+    position: absolute;
+    left:22px;
+    top: 20px;
+    width: 120px;
+    height: 37px;
+    display: flex;
+    font-family: 'Roboto', ;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px; 
+    color: #000000;
+}
+
+#search_Bar{
+    position: right;
+    left:0px;
+    top: 20px;
+    font-size: 23px; 
+
+
+}
+
+#three_Dots{
+    position: right;
+    left:0px;
+    top: 20px;
+    font-size: 23px; 
+
+}
+
+.navbar-text{
+    display: flex;
+    justify-content: space-evenly;
+}
