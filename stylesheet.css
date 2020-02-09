@@ -2,39 +2,200 @@ body{
     
 }
 
-#PHAROS{
+/*/navigation bar */
+
+.navbar-brand {
     border-width: 0px;
     position: absolute;
-    left:22px;
+    left: 22px;
     top: 20px;
     width: 120px;
     height: 37px;
     display: flex;
-    font-family: 'Roboto', ;
+    font-family: 'Roboto Bold', 'Roboto Regular', 'Roboto';
     font-weight: 700;
     font-style: normal;
-    font-size: 30px; 
-    color: #000000;
+    font-size: 30px;
+    
 }
 
-#search_Bar{
-    position: right;
-    left:0px;
-    top: 20px;
-    font-size: 23px; 
-
-
+.navbar-light .navbar-brand {
+    color:#fff;
 }
 
-#three_Dots{
-    position: right;
-    left:0px;
-    top: 20px;
-    font-size: 23px; 
+#search_Bar {
+    border-width: 0px;
+    position: absolute;
+    left: 1161px;
+    top: 21px;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    font-size: 23px;
+    color: #FFFFFF;
+    text-align: left;
+}
 
+#three_Dots {
+    border-width: 0px;
+    position: absolute;
+    left: 1219px;
+    top: 21px;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    font-size: 23px;
+    color: #FFFFFF;
+    text-align: left;
 }
 
 .navbar-text{
     display: flex;
     justify-content: space-evenly;
+   
 }
+
+/*container for three boxes*/
+
+.container {
+    border-width: 0px;
+    position: absolute;
+    left: 92px;
+    top: 99px;
+    
+    height: 700px;
+    display: flex;
+   
+   
+}
+
+/*everything from the 1rst box*/
+
+#box1_Titre {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    margin-left: -230px;
+    margin-top: -15px;
+    
+}
+
+#box1_Election1 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+    line-height:5px;
+}
+
+#box1_Election2 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+    line-height: 5px;
+}
+
+#box1_Election3 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+    line-height: 5px;
+}
+
+#box1_Election4 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+    line-height: 5px;
+}
+
+/*BUTTONS IN THE FIRST BOX*/
+
+#u10 {
+    border-width: 0px;
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    width: 37px;
+    height: 34px;
+    display: flex;
+
+}
+#u13 {
+    border-width: 0px;
+    position: absolute;
+    left: 10px;
+    top: 140px;
+    width: 37px;
+    height: 50px;
+    display: flex;
+    
+}
+#u16 {
+    border-width: 0px;
+    position: absolute;
+    left: 10px;
+    top: 210px;
+    width: 37px;
+    height: 34px;
+    display: flex;
+}
+#u19 {
+    border-width: 0px;
+    position: absolute;
+    left: 10px;
+    top: 280px;
+    width: 37px;
+    height: 34px;
+    display: flex;
+}
+
+/*FIRST BUTTON WITH DARKER CENTER IN FIRST BOX*/
+
+.radio_button {
+    text-align: left;
+}
+
+
+/*SECOND BOX PARTIS POLITICOS*/
+
+#box2_Partis {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    margin-left: -30px;
+    margin-top: -15px;
+}
+
+
+
+/*BACKGROUND COLOR OF WEBSITE*/
+body {
+    margin: 0px;
+    background-color: rgba(242, 242, 242, 1);
+    background-image: none;
+    position: relative;
+    left: 0px;
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
