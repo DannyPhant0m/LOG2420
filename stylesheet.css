@@ -3,20 +3,29 @@ body{
 }
 
 /*/navigation bar */
-
 .navbar-brand {
+    font-family: 'Roboto Bold', 'Roboto Regular', 'Roboto';
+    color: grey;
+    font-size: 30px;
+    margin: 0px;
+    font-weight: 700;
+    left: 24px;
+    top: 22px;
+    width: 120px;
+    height : 47px;
+}
+. {
     border-width: 0px;
     position: absolute;
     left: 22px;
     top: 20px;
     width: 120px;
     height: 37px;
-    display: flex;
     font-family: 'Roboto Bold', 'Roboto Regular', 'Roboto';
     font-weight: 700;
     font-style: normal;
     font-size: 30px;
-    
+    margin: 0px;
 }
 
 .navbar-light .navbar-brand {
@@ -184,7 +193,128 @@ body{
     margin-top: -15px;
 }
 
+#box2_Parti1 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+    line-height: 5px;
+}
 
+#box2_Parti2 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+    line-height: 5px;
+}
+
+#box2_Parti3 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+    line-height: 5px;
+}
+
+#box2_Parti4 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+    line-height: 5px;
+}
+
+#box2_Parti5 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+    line-height: 5px;
+}
+
+#box2_Parti6 {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-top: 45px;
+    line-height: 5px;
+}
+
+#u50 {
+    border-width: 0px;
+    position: absolute;
+   
+    width: 22px;
+    height: 34px;
+    display: flex;
+    font-size: 17px;
+}
+
+#u53 {
+    border-width: 0px;
+    position: absolute;
+    
+    width: 22px;
+    height: 34px;
+    display: flex;
+    font-size: 17px;
+}
+
+#u56 {
+    border-width: 0px;
+    position: absolute;
+   
+    width: 22px;
+    height: 34px;
+    display: flex;
+    font-size: 17px;
+}
+
+#u59 {
+    border-width: 0px;
+    position: absolute;
+    width: 22px;
+    height: 34px;
+    display: flex;
+    font-size: 17px;
+}
+
+#u62 {
+    border-width: 0px;
+    position: absolute;
+    width: 22px;
+    height: 34px;
+    display: flex;
+    font-size: 17px;
+}
+
+#u65 {
+    border-width: 0px;
+    position: absolute;
+    width: 22px;
+    height: 34px;
+    display: flex;
+    font-size: 17px;
+}
 
 /*BACKGROUND COLOR OF WEBSITE*/
 body {
