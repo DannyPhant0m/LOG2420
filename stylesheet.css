@@ -71,11 +71,8 @@ body{
     position: absolute;
     left: 92px;
     top: 99px;
-    
     height: 700px;
     display: flex;
-   
-   
 }
 
 /*everything from the 1rst box*/
@@ -87,7 +84,7 @@ body{
     font-size: 20px;
     margin-left: -230px;
     margin-top: -15px;
-    
+ 
 }
 
 #box1_Election1 {
@@ -316,6 +313,14 @@ body{
     font-size: 17px;
 }
 
+/*third box actions*/
+
+#box3_Actions {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
 /*BACKGROUND COLOR OF WEBSITE*/
 body {
     margin: 0px;
