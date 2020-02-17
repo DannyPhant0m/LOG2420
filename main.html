@@ -16,6 +16,9 @@
     <link href="stylesheet.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    
+    <script type="text/javascript" src="main.js"></script>
+
 
 </head>
 <body>
@@ -51,19 +54,15 @@
                             </div>
                             <div id="u10" class="ax_default radio_button selected" selectiongroup="Elections">
                                 <label id="u10_input_label" for="u10_input" style="position: absolute; left: -5px;top: -5px;">
-                                    <script>function toggleImage(){
 
-    var img1 = "images/u10.svg";
-    var img2 = "images/u10_selected.svg";
-
-    var imgElement = document.getElementbyId('toggleImage');
-                                    
-    imgElement.src = (imgElement.src === img1) ? img2 : img1;
-
-}
-</script>
-                                    <img src="images/u10.svg" id="toggleImage" onclick="toggleImage();"/>
-
+                                    <img id="desat"
+                                         onclick="swapImageCircle(
+                                                    'desat',
+                                                    'images/u10.svg',
+                                                    'images/u10_selected.svg'
+                                         )"
+                                         src="images/u10.svg"
+                                    />
                                     <div id="u10_text" class="text " style="display:none; visibility: hidden">
                                         <p></p>
                                     </div>
@@ -78,7 +77,14 @@
                             </div>
                             <div id="u13" class="ax_default radio_button" selectiongroup="Elections">
                                 <label id="u13_input_label" for="u13_input" style="position: absolute; left: -5px;top: -5px;">
-                                    <img id="u13_img" class="img " src="images/u13.svg">
+                                    
+                                    <img id="desata"
+                                         onclick="swapImageCircle(
+                                                    'desata',
+                                                    'images/u13.svg',
+                                                    'images/u10_selected.svg'
+                                         )"
+                                         src="images/u13.svg" />
                                     <div id="u13_text" class="text " style="display:none; visibility: hidden">
                                         <p></p>
                                     </div>
@@ -93,7 +99,13 @@
                             </div>
                             <div id="u16" class="ax_default radio_button" selectiongroup="Elections">
                                 <label id="u16_input_label" for="u16_input" style="position: absolute; left: -5px;top: -5px;">
-                                    <img id="u16_img" class="img " src="images/u16.svg">
+                                    <img id="desato"
+                                         onclick="swapImageCircle(
+                                                    'desato',
+                                                    'images/u16.svg',
+                                                    'images/u10_selected.svg'
+                                         )"
+                                         src="images/u16.svg" />
                                     <div id="u16_text" class="text " style="display:none; visibility: hidden">
                                         <p></p>
                                     </div>
@@ -108,7 +120,13 @@
                             </div>
                             <div id="u19" class="ax_default radio_button" selectiongroup="Elections">
                                 <label id="u19_input_label" for="u19_input" style="position: absolute; left: -5px; top: -5px;">
-                                    <img id="u19_img" class="img " src="images/u19.svg">
+                                    <img id="desate"
+                                         onclick="swapImageCircle(
+                                                    'desate',
+                                                    'images/u19.svg',
+                                                    'images/u10_selected.svg'
+                                         )"
+                                         src="images/u19.svg" />
                                     <div id="u19_text" class="text " style="display:none; visibility: hidden">
                                         <p></p>
                                     </div>
@@ -141,7 +159,13 @@
                             </div>
                             <div id="u50" class="ax_default checkbox mouseOver" style="left: 564px; top: 160px;">
                                 <label id="u50_input_label" for="u50_input" style="position: absolute; left: 0px;">
-                                    <img id="u50_img" class="img mouseOver" src="images/u50.svg">
+                                    <img id="desati"
+                                         onclick="swapImageBox(
+                                                    'desati',
+                                                    'images/u50.svg',
+                                                    'images/u50_selected.svg'
+                                         )"
+                                         src="images/u50.svg" />
                                     <div id="u50_text" class="text " style="display:none; visibility: hidden">
                                         <p> id= "cache0"</p>
                                     </div>
@@ -156,7 +180,13 @@
                             </div>
                             <div id="u53" class="ax_default checkbox mouseOver" style="left: 564px; top: 226px;">
                                 <label id="u53_input_label" for="u53_input" style="position: absolute; left: 0px;">
-                                    <img id="u53_img" class="img mouseOver" src="images/u53.svg">
+                                    <img id="desatii"
+                                         onclick="swapImageBox(
+                                                    'desatii',
+                                                    'images/u53.svg',
+                                                    'images/u53_selected.svg'
+                                         )"
+                                         src="images/u53.svg" />                                 
                                     <div id="u53_text" class="text " style="display:none; visibility: hidden">
                                         <p id="cache0" style=""></p>
                                     </div>
@@ -171,7 +201,13 @@
                             </div>
                             <div id="u56" class="ax_default checkbox mouseOver" style="left: 564px; top: 292px;">
                                 <label id="u56_input_label" for="u56_input" style="position: absolute; left: 0px;">
-                                    <img id="u56_img" class="img mouseOver" src="images/u56.svg">
+                                    <img id="desatiii"
+                                         onclick="swapImageBox(
+                                                    'desatiii',
+                                                    'images/u56.svg',
+                                                    'images/u56_selected.svg'
+                                         )"
+                                         src="images/u56.svg" />
                                     <div id="u56_text" class="text " style="display:none; visibility: hidden">
                                         <p id="cache6" style=""></p>
                                     </div>
@@ -186,7 +222,13 @@
                             </div>
                             <div id="u59" class="ax_default checkbox" style="left: 564px; top: 357px;">
                                 <label id="u59_input_label" for="u59_input" style="position: absolute; left: 0px;">
-                                    <img id="u59_img" class="img " src="images/u59.svg">
+                                    <img id="desatiiii"
+                                         onclick="swapImageBox(
+                                                    'desatiiii',
+                                                    'images/u59.svg',
+                                                    'images/u59_selected.svg'
+                                         )"
+                                         src="images/u59.svg" />
                                     <div id="u59_text" class="text " style="display:none; visibility: hidden">
                                         <p></p>
                                     </div>
@@ -201,7 +243,13 @@
                             </div>
                             <div id="u62" class="ax_default checkbox" style="left: 564px; top: 423px;">
                                 <label id="u62_input_label" for="u62_input" style="position: absolute; left: 0px;">
-                                    <img id="u62_img" class="img " src="images/u62.svg">
+                                    <img id="desatiiiii"
+                                         onclick="swapImageBox(
+                                                    'desatiiiii',
+                                                    'images/u62.svg',
+                                                    'images/u62_selected.svg'
+                                         )"
+                                         src="images/u62.svg" />
                                     <div id="u62_text" class="text " style="display:none; visibility: hidden">
                                         <p></p>
                                     </div>
@@ -216,7 +264,13 @@
                             </div>
                             <div id="u65" class="ax_default checkbox mouseOver" style="left: 564px; top: 489px;">
                                 <label id="u65_input_label" for="u65_input" style="position: absolute; left: 0px;">
-                                    <img id="u65_img" class="img mouseOver" src="images/u65.svg">
+                                    <img id="desatiiiiiii"
+                                         onclick="swapImageBox(
+                                                    'desatiiiiiii',
+                                                    'images/u65.svg',
+                                                    'images/u65_selected.svg'
+                                         )"
+                                         src="images/u65.svg" />
                                     <div id="u65_text" class="text " style="display:none; visibility: hidden">
                                         <p id="cache7" style=""></p>
                                     </div>

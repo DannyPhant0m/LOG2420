@@ -1,12 +1,19 @@
-                        
-function toggleImage(){
+function swapImageCircle(id,primary,secondary) {
+    src=document.getElementById(id).src;
+    if (src.match(primary)) {
+        document.getElementById(id).src=secondary;
+    } else {
+        document.getElementById(id).src=primary;
+    }
+}
 
-    var img1 = "images/u10.svg";
-    var img2 = "images/u10_selected.svg";
 
-    var imgElement = document.getElementbyId('toggleImage');
-                                    
-    imgElement.src = (imgElement.src === img1) ? img2 : img1;
-
+function swapImageBox(id, primary, secondary) {
+    src = document.getElementById(id).src;
+    if (src.match(primary)) {
+        document.getElementById(id).src = secondary;
+    } else {
+        document.getElementById(id).src = primary;
+    }
 }
 
