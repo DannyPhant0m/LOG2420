@@ -9,24 +9,12 @@ body{
     font-size: 30px;
     margin: 0px;
     font-weight: 700;
-    left: 24px;
-    top: 22px;
+    left: 60px;
+    top: 23px;
     width: 120px;
     height : 47px;
 }
-. {
-    border-width: 0px;
-    position: absolute;
-    left: 22px;
-    top: 20px;
-    width: 120px;
-    height: 37px;
-    font-family: 'Roboto Bold', 'Roboto Regular', 'Roboto';
-    font-weight: 700;
-    font-style: normal;
-    font-size: 30px;
-    margin: 0px;
-}
+
 
 .navbar-light .navbar-brand {
     color:#fff;
@@ -66,14 +54,41 @@ body{
 
 /*container for three boxes*/
 
-.container {
+.container-fluid {
     border-width: 0px;
     position: absolute;
     left: 92px;
     top: 99px;
     height: 700px;
     display: flex;
+
 }
+
+
+.offset {
+
+    width: 135px;
+}
+
+.col-lg-60 {
+    width: 357px;
+    height: 685px;
+     
+}
+
+.col-sm-30{
+    width: 265px;
+    height: 400px;
+}
+
+.col-md {
+    width: 324px;
+    height: 685px;
+}
+
+
+
+
 
 /*everything from the 1rst box*/
 
@@ -82,8 +97,8 @@ body{
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    margin-left: -230px;
-    margin-top: -15px;
+    margin-left: -228px;
+    margin-top: -12px;
  
 }
 
@@ -186,8 +201,8 @@ body{
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    margin-left: -30px;
-    margin-top: -15px;
+    margin-left: -73px;
+    margin-top: -10px;
 }
 
 #box2_Parti1 {
@@ -196,8 +211,8 @@ body{
     font-style: normal;
     text-align: left;
     line-height: 20px;
-    margin-left: 40px;
-    margin-top: 40px;
+    margin-left: 72px;
+    margin-top: 29px;
     line-height: 5px;
 }
 
@@ -207,8 +222,8 @@ body{
     font-style: normal;
     text-align: left;
     line-height: 20px;
-    margin-left: 40px;
-    margin-top: 45px;
+    margin-left: 72px;
+    margin-top: 41px;
     line-height: 5px;
 }
 
@@ -218,8 +233,8 @@ body{
     font-style: normal;
     text-align: left;
     line-height: 20px;
-    margin-left: 40px;
-    margin-top: 45px;
+    margin-left: 72px;
+    margin-top: 40px;
     line-height: 5px;
 }
 
@@ -229,8 +244,8 @@ body{
     font-style: normal;
     text-align: left;
     line-height: 20px;
-    margin-left: 40px;
-    margin-top: 45px;
+    margin-left: 72px;
+    margin-top: 40px;
     line-height: 5px;
 }
 
@@ -240,8 +255,8 @@ body{
     font-style: normal;
     text-align: left;
     line-height: 20px;
-    margin-left: 40px;
-    margin-top: 45px;
+    margin-left: 72px;
+    margin-top: 40px;
     line-height: 5px;
 }
 
@@ -251,8 +266,8 @@ body{
     font-style: normal;
     text-align: left;
     line-height: 20px;
-    margin-left: 40px;
-    margin-top: 45px;
+    margin-left: 72px;
+    margin-top: 40px;
     line-height: 5px;
 }
 
@@ -264,6 +279,9 @@ body{
     height: 34px;
     display: flex;
     font-size: 17px;
+
+    margin-left: -89px;
+    margin-top: -100px;
 }
 
 #u53 {
@@ -274,6 +292,9 @@ body{
     height: 34px;
     display: flex;
     font-size: 17px;
+
+    margin-left: -89px;
+    margin-top: -100px;
 }
 
 #u56 {
@@ -284,33 +305,48 @@ body{
     height: 34px;
     display: flex;
     font-size: 17px;
+
+    margin-left: -89px;
+    margin-top: -100px;
 }
 
 #u59 {
     border-width: 0px;
     position: absolute;
+
     width: 22px;
     height: 34px;
     display: flex;
     font-size: 17px;
+
+    margin-left: -89px;
+    margin-top: -100px;
 }
 
 #u62 {
     border-width: 0px;
     position: absolute;
+
     width: 22px;
     height: 34px;
     display: flex;
     font-size: 17px;
+
+    margin-left: -89px;
+    margin-top: -100px;
 }
 
 #u65 {
     border-width: 0px;
     position: absolute;
+
     width: 22px;
     height: 34px;
     display: flex;
     font-size: 17px;
+
+    margin-left: -89px;
+    margin-top: -100px;
 }
 
 /*third box actions*/
@@ -320,8 +356,38 @@ body{
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+    margin-left: -180px;
+    margin-top: -10px;
 }
+
+.form-control {
+    font-family: 'Roboto Medium', 'Roboto Regular', 'Roboto';
+    font-weight: 510;
+    font-style: normal;
+    font-size: 14px;
+    color: rgb(127, 127, 127);
+    background-color: rgb(215, 215, 215);
+    text-align: center;
+    letter-spacing: normal;
+    line-height: normal;
+    text-rendering: optimizelegibility;
+    font-feature-settings: "kern";
+    font-kerning: normal;
+    
+}
+
+.connaitre {
+    margin-left: 0px;
+    margin-top: 160px;
+}
+.comparer {
+    margin-left: 0px;
+    margin-top: 160px;
+}
+
+
 /*BACKGROUND COLOR OF WEBSITE*/
+
 body {
     margin: 0px;
     background-color: rgba(242, 242, 242, 1);
