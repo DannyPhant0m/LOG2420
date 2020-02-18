@@ -16,7 +16,8 @@
     <link href="stylesheet.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    
+    <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3679a/images/favicon_play.ico">
+
     <script type="text/javascript" src="main.js"></script>
 
 
@@ -52,18 +53,22 @@
                                     <span style=" color:rgba(0,0,0,0.5372549019600784);">21 octobre 2019</span>
                                 </p>
                             </div>
-                            <div id="u10" class="ax_default radio_button selected" selectiongroup="Elections">
-                                <label id="u10_input_label" for="u10_input" style="position: absolute; left: -5px;top: -5px;">
+                            <div id="u10">
+                                <label>
+                                    <input type="radio" name="test" value ="1" checked>
 
                                     <img id="desat"
-                                         onclick="swapImageCircle('desat','images/u10.svg','images/u10_selected.svg')"
-                                         src="images/u10.svg"
+                                         onclick=
+                                         "swapImageCircle('desat','images/u10_selected.svg','images/u10.svg'); swapText()"
+                                         
+                                         
+                                         src="images/u10_selected.svg"  
+                                         
+                                         
+                                   
                                     />
-                                    <div id="u10_text" class="text " style="display:none; visibility: hidden">
-                                        <p></p>
-                                    </div>
+                                
                                 </label>
-                                <input id="u10_input" type="radio" value="radio" name="Elections" checked="">
                             </div>
                             <div id="box1_Election2">
                                 <p>Élections générales provinciales</p>
@@ -71,8 +76,9 @@
                                     <span style=" color:rgba(0,0,0,0.5372549019600784);">1er octobre 2018</span>
                                 </p>
                             </div>
-                            <div id="u13" class="ax_default radio_button" selectiongroup="Elections">
-                                <label id="u13_input_label" for="u13_input" style="position: absolute; left: -5px;top: -5px;">
+                            <div id="u13">
+                                <label>
+                                    <input type="radio" name="test" value="2" >
                                     
                                     <img id="desata"
                                          onclick="swapImageCircle(
@@ -81,11 +87,8 @@
                                                     'images/u10_selected.svg'
                                          )"
                                          src="images/u13.svg" />
-                                    <div id="u13_text" class="text " style="display:none; visibility: hidden">
-                                        <p></p>
-                                    </div>
+                                   
                                 </label>
-                                <input id="u13_input" type="radio" value="radio" name="Elections">
                             </div>
                             <div id="box1_Election3">
                                 <p>42e élection fédérale</h1>
@@ -93,8 +96,9 @@
                                     <span style=" color:rgba(0,0,0,0.5372549019600784);">19 octobre 2015</span>
                                 </p>
                             </div>
-                            <div id="u16" class="ax_default radio_button" selectiongroup="Elections">
-                                <label id="u16_input_label" for="u16_input" style="position: absolute; left: -5px;top: -5px;">
+                            <div id="u16">
+                                <label>
+                                    <input type="radio" name="test" value=" 3">
                                     <img id="desato"
                                          onclick="swapImageCircle(
                                                     'desato',
@@ -102,9 +106,7 @@
                                                     'images/u10_selected.svg'
                                          )"
                                          src="images/u16.svg" />
-                                    <div id="u16_text" class="text " style="display:none; visibility: hidden">
-                                        <p></p>
-                                    </div>
+                                   
                                 </label>
                                 <input id="u16_input" type="radio" value="radio" name="Elections">
                             </div>
@@ -114,8 +116,9 @@
                                     <span style=" color:rgba(0,0,0,0.5372549019600784);">7 avril 2014</span>
                                 </p>
                             </div>
-                            <div id="u19" class="ax_default radio_button" selectiongroup="Elections">
-                                <label id="u19_input_label" for="u19_input" style="position: absolute; left: -5px; top: -5px;">
+                            <div id="u19"> 
+                                <label>
+                                    <input type="radio" name="test" value=" 4">
                                     <img id="desate"
                                          onclick="swapImageCircle(
                                                     'desate',
@@ -123,9 +126,7 @@
                                                     'images/u10_selected.svg'
                                          )"
                                          src="images/u19.svg" />
-                                    <div id="u19_text" class="text " style="display:none; visibility: hidden">
-                                        <p></p>
-                                    </div>
+                                   
                                 </label>
                                 <input id="u19_input" type="radio" value="radio" name="Elections">
                             </div>
@@ -143,140 +144,165 @@
                 <div class="row">
                     <div class="col-lg-60">
                         <div class="shadow p-3 mb-5 bg-white rounded">
+                            
+                            <div id=" PARTIS POLITIQUES FEDERAUX">
 
-                            <div id="box2_Partis">
-                                Partis politiques fédéraux
-                            </div>
-                            <div id="box2_Parti1">
-                                <p>P.L.C</p>
-                                <p style="font-size:14px;">
-                                    <span style=" color:rgba(0,0,0,0.5372549019600784);">Parti libéral du Canada</span>
-                                </p>
-                            </div>
-                            <div id="u50" class="ax_default checkbox mouseOver" style="left: 564px; top: 160px;">
-                                <label id="u50_input_label" for="u50_input" style="position: absolute; left: 0px;">
-                                    <img id="desati"
-                                         onclick="swapImageBox(
+                                <div id="box2_Partis">
+                                    Partis politiques fédéraux
+                                </div>
+                                <div id="box2_Parti1">
+                                    <p>P.L.C</p>
+                                    <p style="font-size:14px;">
+                                        <span style=" color:rgba(0,0,0,0.5372549019600784);">Parti libéral du Canada</span>
+                                    </p>
+                                </div>
+                                <div id="u50" class="ax_default checkbox mouseOver" style="left: 564px; top: 160px;">
+                                    <label id="u50_input_label" for="u50_input" style="position: absolute; left: 0px;">
+                                        <img id="desati"
+                                             onclick="swapImageBox(
                                                     'desati',
                                                     'images/u50.svg',
                                                     'images/u50_selected.svg'
                                          )"
-                                         src="images/u50.svg" />
-                                    <div id="u50_text" class="text " style="display:none; visibility: hidden">
-                                        <p> id= "cache0"</p>
-                                    </div>
-                                </label>
-                                <input id="u50_input" type="checkbox" value="checkbox" class="mouseOver">
-                            </div>
-                            <div id="box2_Parti2">
-                                <p>P.C.C.</p>
-                                <p style="font-size:14px;">
-                                    <span style=" color:rgba(0,0,0,0.5372549019600784);">Parti conservateur du Canada</span>
-                                </p>
-                            </div>
-                            <div id="u53" class="ax_default checkbox mouseOver" style="left: 564px; top: 226px;">
-                                <label id="u53_input_label" for="u53_input" style="position: absolute; left: 0px;">
-                                    <img id="desatii"
-                                         onclick="swapImageBox(
+                                             src="images/u50.svg" />
+                                        <div id="u50_text" class="text " style="display:none; visibility: hidden">
+                                            <p> id= "cache0"</p>
+                                        </div>
+                                    </label>
+                                    <input id="u50_input" type="checkbox" value="checkbox" class="mouseOver">
+                                </div>
+                                <div id="box2_Parti2">
+                                    <p>P.C.C.</p>
+                                    <p style="font-size:14px;">
+                                        <span style=" color:rgba(0,0,0,0.5372549019600784);">Parti conservateur du Canada</span>
+                                    </p>
+                                </div>
+                                <div id="u53" class="ax_default checkbox mouseOver" style="left: 564px; top: 226px;">
+                                    <label id="u53_input_label" for="u53_input" style="position: absolute; left: 0px;">
+                                        <img id="desatii"
+                                             onclick="swapImageBox(
                                                     'desatii',
                                                     'images/u53.svg',
                                                     'images/u53_selected.svg'
                                          )"
-                                         src="images/u53.svg" />                                 
-                                    <div id="u53_text" class="text " style="display:none; visibility: hidden">
-                                        <p id="cache0" style=""></p>
-                                    </div>
-                                </label>
-                                <input id="u53_input" type="checkbox" value="checkbox" class="mouseOver">
-                            </div>
-                            <div id="box2_Parti3">
-                                <p>B.Q.</p>
-                                <p style="font-size:14px;">
-                                    <span style=" color:rgba(0,0,0,0.5372549019600784);">Bloc Québécois</span>
-                                </p>
-                            </div>
-                            <div id="u56" class="ax_default checkbox mouseOver" style="left: 564px; top: 292px;">
-                                <label id="u56_input_label" for="u56_input" style="position: absolute; left: 0px;">
-                                    <img id="desatiii"
-                                         onclick="swapImageBox(
+                                             src="images/u53.svg" />
+                                        <div id="u53_text" class="text " style="display:none; visibility: hidden">
+                                            <p id="cache0" style=""></p>
+                                        </div>
+                                    </label>
+                                    <input id="u53_input" type="checkbox" value="checkbox" class="mouseOver">
+                                </div>
+                                <div id="box2_Parti3">
+                                    <p>B.Q.</p>
+                                    <p style="font-size:14px;">
+                                        <span style=" color:rgba(0,0,0,0.5372549019600784);">Bloc Québécois</span>
+                                    </p>
+                                </div>
+                                <div id="u56" class="ax_default checkbox mouseOver" style="left: 564px; top: 292px;">
+                                    <label id="u56_input_label" for="u56_input" style="position: absolute; left: 0px;">
+                                        <img id="desatiii"
+                                             onclick="swapImageBox(
                                                     'desatiii',
                                                     'images/u56.svg',
                                                     'images/u56_selected.svg'
                                          )"
-                                         src="images/u56.svg" />
-                                    <div id="u56_text" class="text " style="display:none; visibility: hidden">
-                                        <p id="cache6" style=""></p>
-                                    </div>
-                                </label>
-                                <input id="u56_input" type="checkbox" value="checkbox" class="mouseOver">
-                            </div>
-                            <div id="box2_Parti4">
-                                <p>N.P.D.</p>
-                                <p style="font-size:14px;">
-                                    <span style=" color:rgba(0,0,0,0.5372549019600784);">Nouveau parti démocratique</span>
-                                </p>
-                            </div>
-                            <div id="u59" class="ax_default checkbox" style="left: 564px; top: 357px;">
-                                <label id="u59_input_label" for="u59_input" style="position: absolute; left: 0px;">
-                                    <img id="desatiiii"
-                                         onclick="swapImageBox(
+                                             src="images/u56.svg" />
+                                        <div id="u56_text" class="text " style="display:none; visibility: hidden">
+                                            <p id="cache6" style=""></p>
+                                        </div>
+                                    </label>
+                                    <input id="u56_input" type="checkbox" value="checkbox" class="mouseOver">
+                                </div>
+                                <div id="box2_Parti4">
+                                    <p>N.P.D.</p>
+                                    <p style="font-size:14px;">
+                                        <span style=" color:rgba(0,0,0,0.5372549019600784);">Nouveau parti démocratique</span>
+                                    </p>
+                                </div>
+                                <div id="u59" class="ax_default checkbox" style="left: 564px; top: 357px;">
+                                    <label id="u59_input_label" for="u59_input" style="position: absolute; left: 0px;">
+                                        <img id="desatiiii"
+                                             onclick="swapImageBox(
                                                     'desatiiii',
                                                     'images/u59.svg',
                                                     'images/u59_selected.svg'
                                          )"
-                                         src="images/u59.svg" />
-                                    <div id="u59_text" class="text " style="display:none; visibility: hidden">
-                                        <p></p>
-                                    </div>
-                                </label>
-                                <input id="u59_input" type="checkbox" value="checkbox">
-                            </div>
-                            <div id="box2_Parti5">
-                                <p>P.V.C.</p>
-                                <p style="font-size:14px;">
-                                    <span style=" color:rgba(0,0,0,0.5372549019600784);">Parti vert du Canada</span>
-                                </p>
-                            </div>
-                            <div id="u62" class="ax_default checkbox" style="left: 564px; top: 423px;">
-                                <label id="u62_input_label" for="u62_input" style="position: absolute; left: 0px;">
-                                    <img id="desatiiiii"
-                                         onclick="swapImageBox(
+                                             src="images/u59.svg" />
+                                        <div id="u59_text" class="text " style="display:none; visibility: hidden">
+                                            <p></p>
+                                        </div>
+                                    </label>
+                                    <input id="u59_input" type="checkbox" value="checkbox">
+                                </div>
+                                <div id="box2_Parti5">
+                                    <p>P.V.C.</p>
+                                    <p style="font-size:14px;">
+                                        <span style=" color:rgba(0,0,0,0.5372549019600784);">Parti vert du Canada</span>
+                                    </p>
+                                </div>
+                                <div id="u62" class="ax_default checkbox" style="left: 564px; top: 423px;">
+                                    <label id="u62_input_label" for="u62_input" style="position: absolute; left: 0px;">
+                                        <img id="desatiiiii"
+                                             onclick="swapImageBox(
                                                     'desatiiiii',
                                                     'images/u62.svg',
                                                     'images/u62_selected.svg'
                                          )"
-                                         src="images/u62.svg" />
-                                    <div id="u62_text" class="text " style="display:none; visibility: hidden">
-                                        <p></p>
-                                    </div>
-                                </label>
-                                <input id="u62_input" type="checkbox" value="checkbox">
-                            </div>
-                            <div id="box2_Parti6">
-                                <p>P.P.C</p>
-                                <p style="font-size:14px;">
-                                    <span style=" color:rgba(0,0,0,0.5372549019600784);">Parti populaire du Canada</span>
-                                </p>
-                            </div>
-                            <div id="u65" class="ax_default checkbox mouseOver" style="left: 564px; top: 489px;">
-                                <label id="u65_input_label" for="u65_input" style="position: absolute; left: 0px;">
-                                    <img id="desatiiiiiii"
-                                         onclick="swapImageBox(
+                                             src="images/u62.svg" />
+                                        <div id="u62_text" class="text " style="display:none; visibility: hidden">
+                                            <p></p>
+                                        </div>
+                                    </label>
+                                    <input id="u62_input" type="checkbox" value="checkbox">
+                                </div>
+                                <div id="box2_Parti6">
+                                    <p>P.P.C</p>
+                                    <p style="font-size:14px;">
+                                        <span style=" color:rgba(0,0,0,0.5372549019600784);">Parti populaire du Canada</span>
+                                    </p>
+                                </div>
+                                <div id="u65" class="ax_default checkbox mouseOver" style="left: 564px; top: 489px;">
+                                    <label id="u65_input_label" for="u65_input" style="position: absolute; left: 0px;">
+                                        <img id="desatiiiiiii"
+                                             onclick="swapImageBox(
                                                     'desatiiiiiii',
                                                     'images/u65.svg',
                                                     'images/u65_selected.svg'
                                          )"
-                                         src="images/u65.svg" />
-                                    <div id="u65_text" class="text " style="display:none; visibility: hidden">
-                                        <p id="cache7" style=""></p>
-                                    </div>
-                                </label>
-                                <input id="u65_input" type="checkbox" value="checkbox" class="mouseOver">
+                                             src="images/u65.svg" />
+                                        <div id="u65_text" class="text " style="display:none; visibility: hidden">
+                                            <p id="cache7" style=""></p>
+                                        </div>
+                                    </label>
+                                    <input id="u65_input" type="checkbox" value="checkbox" class="mouseOver">
+                                </div>
                             </div>
+
+
+
+
+
+                            <div id="SEPARATION">
+
+                                <div id="box2_Partis">
+                                    Cette partie sert a allonger la boite
+                                </div>
+                                <div id="box2_Parti1">
+                                    <p>P.L.C</p>
+                                    <p style="font-size:14px;">
+                                        <span style=" color:rgba(0,0,0,0.5372549019600784);">BLABLABALBLA</span>
+                                    </p>
+                                </div>
+                            
+                           
+                            </div>
+
+
+
+
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-lg-14 offset">
 
