@@ -6,25 +6,72 @@ fetch('https://log2420-serve.herokuapp.com/JSON/output.json')
         return response.json();    //transforme le fichier json en javascript
     })
     .then(function (data) {    // on obtient lobjet js cree plus haut
-        addElement();
+        addElementElections(data);
+        addElementPartisFederaux(data);
+        addElementPartisProvinciaux(data);
     })
     .catch(function (err) {   //regarde si une erreur s'est incruste
         console.log('error: ' + err);
             
     });
 
-function addElement () { 
-  // create a new div element 
+function addElementElections (data) { 
   var newDiv = document.createElement("div"); 
-  // and give it some content 
-  var newContent = document.createTextNode(data.Elections.name); 
-  // add the text node to the newly created div
-  newDiv.appendChild(newContent);  
 
-  // add the newly created element and its content into the DOM 
-  var currentDiv = document.getElementById("div1"); 
-  document.body.insertBefore(newDiv, currentDiv); 
+  for (var i = 0; i < data.length; i++){
+
+    var newName = document.createTextNode(data.Elections[i].name); 
+    newDiv.appendChild(newName);  
+
+    var newDate = document.createTextNode(data.Elections[i].date); 
+    newDiv.appendChild(newDate); 
+
+    var newType = document.createTextNode(data.Elections[i].type); 
+    newDiv.appendChild(newType); 
+
+    var currentDiv = document.getElementById("div1"); 
+    document.body.insertBefore(newDiv, currentDiv); 
+  }
+  
 }
+
+
+function addElementPartisFederaux (data) { 
+    var newDiv = document.createElement("div"); 
+  
+    for (var i = 0; i < data.length; i++){
+  
+      var newAbrev = document.createTextNode(data.PartisFederaux[i].abreviation); 
+      newDiv.appendChild(newAbrev);  
+  
+      var newFullName = document.createTextNode(data.PartisFederaux[i].fullname); 
+      newDiv.appendChild(newFullName); 
+  
+      var currentDiv = document.getElementById("div1"); 
+      document.body.insertBefore(newDiv, currentDiv); 
+    }
+    
+  }
+
+  
+
+  function addElementPartisProvinciaux (data) { 
+    var newDiv = document.createElement("div"); 
+  
+    for (var i = 0; i < data.length; i++){
+  
+        var newAbrev = document.createTextNode(data.PartisProvinciaux[i].abreviation); 
+        newDiv.appendChild(newAbrev);  
+    
+        var newFullName = document.createTextNode(data.PartisProvinciaux[i].fullname); 
+        newDiv.appendChild(newFullName); 
+  
+      var currentDiv = document.getElementById("div1"); 
+      document.body.insertBefore(newDiv, currentDiv); 
+    }
+    
+  }
+  
 
 
 
