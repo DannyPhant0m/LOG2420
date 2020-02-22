@@ -6,9 +6,12 @@ fetch('https://log2420-serve.herokuapp.com/JSON/output.json')
         return response.json();    //transforme le fichier json en javascript
     })
     .then(function (data) {    // on obtient lobjet js cree plus haut
-        addElementElections(data);
-        addElementPartisFederaux(data);
-        addElementPartisProvinciaux(data);
+    
+    console.log(data);
+    addElementElections(data);
+      // addElementElections(data);
+    addElementPartisFederaux(data);
+        // addElementPartisProvinciaux(data);
     })
     .catch(function (err) {   //regarde si une erreur s'est incruste
         console.log('error: ' + err);
@@ -16,62 +19,100 @@ fetch('https://log2420-serve.herokuapp.com/JSON/output.json')
     });
 
 function addElementElections (data) { 
-  var newDiv = document.createElement("div"); 
 
-  for (var i = 0; i < data.length; i++){
-
-    var newName = document.createTextNode(data.Elections[i].name); 
-    newDiv.appendChild(newName);  
-
-    var newDate = document.createTextNode(data.Elections[i].date); 
-    newDiv.appendChild(newDate); 
-
-    var newType = document.createTextNode(data.Elections[i].type); 
-    newDiv.appendChild(newType); 
-
-    var currentDiv = document.getElementById("div1"); 
-    document.body.insertBefore(newDiv, currentDiv); 
-  }
+  //Elections//
+  document.getElementById("box1_0_nom").innerHTML = data.Elections[0].name;
+  document.getElementById("box1_0_date").innerHTML = data.Elections[0].date;
+  document.getElementById("box1_0_type").innerHTML = data.Elections[0].type;
   
+  document.getElementById("box1_1_nom").innerHTML = data.Elections[1].name;
+  document.getElementById("box1_1_date").innerHTML = data.Elections[1].date;
+  document.getElementById("box1_1_type").innerHTML = data.Elections[1].type;
+
+  document.getElementById("box1_2_nom").innerHTML = data.Elections[2].name;
+  document.getElementById("box1_2_date").innerHTML = data.Elections[2].date;
+  document.getElementById("box1_2_type").innerHTML = data.Elections[2].type;
+
+  document.getElementById("box1_3_nom").innerHTML = data.Elections[3].name;
+  document.getElementById("box1_3_date").innerHTML = data.Elections[3].date;
+  document.getElementById("box1_3_type").innerHTML = data.Elections[3].type;
+  
+  //PartisFederaux//
+  document.getElementById("box2_0_abv").innerHTML = data.PartisFederaux[0].abreviation;
+  document.getElementById("box2_0_fn").innerHTML = data.PartisFederaux[0].fullname;
+
+  document.getElementById("box2_1_abv").innerHTML = data.PartisFederaux[1].abreviation;
+  document.getElementById("box2_1_fn").innerHTML = data.PartisFederaux[1].fullname;
+
+  document.getElementById("box2_2_abv").innerHTML = data.PartisFederaux[2].abreviation;
+  document.getElementById("box2_2_fn").innerHTML = data.PartisFederaux[2].fullname;
+
+  document.getElementById("box2_3_abv").innerHTML = data.PartisFederaux[3].abreviation;
+  document.getElementById("box2_3_fn").innerHTML = data.PartisFederaux[3].fullname;
+
+  document.getElementById("box2_4_abv").innerHTML = data.PartisFederaux[4].abreviation;
+  document.getElementById("box2_4_fn").innerHTML = data.PartisFederaux[4].fullname;
+
+  document.getElementById("box2_5_abv").innerHTML = data.PartisFederaux[5].abreviation;
+  document.getElementById("box2_5_fn").innerHTML = data.PartisFederaux[5].fullname;
+
+
+  //PartisProvinciaux//
+  document.getElementById("box3_0_abv").innerHTML = data.PartisProvinciaux[0].abreviation;
+  document.getElementById("box3_0_fn").innerHTML = data.PartisProvinciaux[0].fullname;
+
+  document.getElementById("box3_1_abv").innerHTML = data.PartisProvinciaux[1].abreviation;
+  document.getElementById("box3_1_fn").innerHTML = data.PartisProvinciaux[1].fullname;
+
+  document.getElementById("box3_2_abv").innerHTML = data.PartisProvinciaux[2].abreviation;
+  document.getElementById("box3_2_fn").innerHTML = data.PartisProvinciaux[2].fullname;
+
+  document.getElementById("box3_3_abv").innerHTML = data.PartisProvinciaux[3].abreviation;
+  document.getElementById("box3_3_fn").innerHTML = data.PartisProvinciaux[3].fullname;
+
+  document.getElementById("box3_4_abv").innerHTML = data.PartisProvinciaux[4].abreviation;
+  document.getElementById("box3_4_fn").innerHTML = data.PartisProvinciaux[4].fullname;
+
+  document.getElementById("box3_5_abv").innerHTML = data.PartisProvinciaux[5].abreviation;
+  document.getElementById("box3_5_fn").innerHTML = data.PartisProvinciaux[5].fullname;
+
+  document.getElementById("box3_6_abv").innerHTML = data.PartisProvinciaux[6].abreviation;
+  document.getElementById("box3_6_fn").innerHTML = data.PartisProvinciaux[6].fullname;
 }
 
 
-function addElementPartisFederaux (data) { 
-    var newDiv = document.createElement("div"); 
-  
-    for (var i = 0; i < data.length; i++){
-  
-      var newAbrev = document.createTextNode(data.PartisFederaux[i].abreviation); 
-      newDiv.appendChild(newAbrev);  
-  
-      var newFullName = document.createTextNode(data.PartisFederaux[i].fullname); 
-      newDiv.appendChild(newFullName); 
-  
-      var currentDiv = document.getElementById("div1"); 
-      document.body.insertBefore(newDiv, currentDiv); 
-    }
-    
-  }
 
-  
+function switchRadio_1() {
+  if($('#btn_cerclePlein_1').css('display') == 'none')
+  {
+      document.getElementById("partis").innerHTML = "Partis politiques fédéraux";
+      $('#btn_cercleVide_1').css('display', 'none');
+      $('#btn_cerclePlein_1').css('display', 'block');
+      $('#btn_cercleVide_2').css('display', 'block');
+      $('#btn_cerclePlein_2').css('display', 'none');
+      $('#btn_cercleVide_3').css('display', 'block');
+      $('#btn_cerclePlein_3').css('display', 'none');
+      $('#btn_cercleVide_4').css('display', 'block');
+      $('#btn_cerclePlein_4').css('display', 'none');
+      $('#btn_carreVide_7').css('display', 'none');
+      $('#btn_carrePlein_7').css('display', 'none');
 
-  function addElementPartisProvinciaux (data) { 
-    var newDiv = document.createElement("div"); 
-  
-    for (var i = 0; i < data.length; i++){
-  
-        var newAbrev = document.createTextNode(data.PartisProvinciaux[i].abreviation); 
-        newDiv.appendChild(newAbrev);  
-    
-        var newFullName = document.createTextNode(data.PartisProvinciaux[i].fullname); 
-        newDiv.appendChild(newFullName); 
-  
-      var currentDiv = document.getElementById("div1"); 
-      document.body.insertBefore(newDiv, currentDiv); 
-    }
-    
-  }
-  
+      document.getElementById("partisFederaux_1").style.display = "block";
+      document.getElementById("partisProvinciaux_1").style.display = "none";
+      document.getElementById("partisFederaux_2").style.display = "block";
+      document.getElementById("partisProvinciaux_2").style.display = "none";
+      document.getElementById("partisFederaux_3").style.display = "block";
+      document.getElementById("partisProvinciaux_3").style.display = "none";
+      document.getElementById("partisFederaux_4").style.display = "block";
+      document.getElementById("partisProvinciaux_4").style.display = "none";
+      document.getElementById("partisFederaux_5").style.display = "block";
+      document.getElementById("partisProvinciaux_5").style.display = "none";
+      document.getElementById("partisFederaux_6").style.display = "block";
+      document.getElementById("partisProvinciaux_6").style.display = "none";
+      document.getElementById("partisProvinciaux_7").style.display = "none";
+
+  } 
+}
 
 
 
