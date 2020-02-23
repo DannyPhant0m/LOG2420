@@ -1,0 +1,191 @@
+/*PAGE 2 CONNNAITRE */
+/*BACKGROUND COLOR OF WEBSITE*/
+
+body {
+    margin: 0px;
+    background-color: rgba(242, 242, 242, 1);
+    background-image: none;
+    position: relative;
+    left: 0px;
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+
+/*/navigation bar */
+.navbar-brand {
+    font-family: 'Roboto Bold', 'Roboto Regular', 'Roboto';
+    color: grey;
+    font-size: 30px;
+    margin: 0px;
+    font-weight: 700;
+    left: 60px;
+    top: 23px;
+    width: 120px;
+    height : 47px;
+}
+
+
+.navbar-light .navbar-brand {
+    color:#fff;
+}
+
+#search_Bar {
+    border-width: 0px;
+    position: absolute;
+    left: 1161px;
+    top: 21px;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    font-size: 23px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+#three_Dots {
+    border-width: 0px;
+    position: absolute;
+    left: 1219px;
+    top: 21px;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    font-size: 23px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.navbar-text{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+#backspace{
+    margin-left: 38px;
+    margin-top: 21px;
+    margin-right:1200px;
+    font-size: 24px;
+    color: rgb(117, 117, 117);
+    text-align: left;
+    cursor:pointer;
+}
+
+.card-header{
+    position: relative;
+    left: 131px;
+    top: 3px;
+    width: 1019px;
+    height: 73px;
+    background-color: rgba(215, 215, 215,1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(215, 215, 215, 1);
+    border-radius: 0px;
+    text-align: left;
+}
+
+#npd{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    color: #000000;
+    position: relative;
+    top:-15px;
+}
+
+#star1{
+    text-align: right;
+    top:15px;
+    position: relative;
+    margin-left:900px;
+    margin-right: 44px;
+    cursor:pointer;
+
+
+}
+.container-fluid {
+    border-width: 0px;
+    position: absolute;
+
+    height: 2000px;
+    width:1019px;
+    display: flex;
+    
+
+}
+#scrollContent{
+    position: absolute;
+    left: 116px;
+    top: 196px;
+    width: 1052px;
+    height: 624px;
+    border-width: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+   
+}
+
+#star{
+    text-align: right;
+    margin-right: 65px;
+    top:32px;
+    position: relative;
+    cursor: pointer;
+}
+#environnement,#education,#sante,#immigration,#econo,#arts,#transport,#energie{
+    width: 1019px;
+    height: 73px;
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgb(215, 215, 215);
+    border-style: solid;
+    border-color: rgb(215, 215, 215);
+    border-width: 1px;
+
+
+}
+#titre1,#titre2,#titre3,#titre4,#titre5,#titre6,#titre7,#titre8{
+    
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #333333;
+    text-align:left;
+    top: 33px;
+    left:33px;
+    position: absolute;
+}
+
+#lorem_ipsum{
+  
+    width: 1019px;
+    height: 235px;
+    
+    background: rgba(255, 255, 255, 1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(215, 215, 215);
+    border-radius: 0px;
+  
+}
+
+#lorem_ipsum_text{
+
+    font-size: 14px;
+    text-align: left;
+    margin-left: 22px;
+    margin-top: 68px;
+    font-family: Arial;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;    
+    box-sizing: border-box;
+    line-height: 16px;
+
+}

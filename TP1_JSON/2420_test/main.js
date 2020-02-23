@@ -23,19 +23,15 @@ function addElementElections (data) {
   //Elections//
   document.getElementById("box1_0_nom").innerHTML = data.Elections[0].name;
   document.getElementById("box1_0_date").innerHTML = data.Elections[0].date;
-  document.getElementById("box1_0_type").innerHTML = data.Elections[0].type;
   
   document.getElementById("box1_1_nom").innerHTML = data.Elections[1].name;
   document.getElementById("box1_1_date").innerHTML = data.Elections[1].date;
-  document.getElementById("box1_1_type").innerHTML = data.Elections[1].type;
 
   document.getElementById("box1_2_nom").innerHTML = data.Elections[2].name;
   document.getElementById("box1_2_date").innerHTML = data.Elections[2].date;
-  document.getElementById("box1_2_type").innerHTML = data.Elections[2].type;
 
   document.getElementById("box1_3_nom").innerHTML = data.Elections[3].name;
   document.getElementById("box1_3_date").innerHTML = data.Elections[3].date;
-  document.getElementById("box1_3_type").innerHTML = data.Elections[3].type;
   
   //PartisFederaux//
   document.getElementById("box2_0_abv").innerHTML = data.PartisFederaux[0].abreviation;
@@ -115,10 +111,54 @@ function switchRadio_1() {
 }
 
 
+function showFederaux(){
+  var firstRadio = document.getElementById("firstRadio");
+  var thirdRadio = document.getElementById("thirdRadio");
+
+  var federaux = document.getElementById("federaux")
+  var provinciaux = document.getElementById("provinciaux")
+
+  if(firstRadio || thirdRadio){
+    federaux.style.display = "block";
+    provinciaux.style.display = "none";
+  }
+  else{
+    federaux.style.display = "none";
+  }
+
+}
 
 
+function showProvinciaux(){
+  var secondRadio = document.getElementById("secondRadio");
+  var fourthRadio = document.getElementById("fourthRadio");
+
+  var provinciaux = document.getElementById("provinciaux")
+  var federaux = document.getElementById("federaux")
+
+  if(secondRadio || fourthRadio){
+    provinciaux.style.display = "block";
+    federaux.style.display = "none";
+  }
+  else{
+    provinciaux.style.display = "none";
+  }
+
+}
 
 
+function swapImages(id,primary,secondary) {
+  src=document.getElementById(id).src;
+  if (src.match(primary)) {
+      document.getElementById(id).src=secondary;
+
+      return true;
+  } else {
+    
+      document.getElementById(id).src=primary;
+      return false;
+  }
+}
 
 
 
