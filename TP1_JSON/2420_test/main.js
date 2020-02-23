@@ -160,132 +160,62 @@ function swapImages(id,primary,secondary) {
   }
 }
 
+function linkCheckBoxes(){
+
+  var firstButton = document.getElementById("firstButton");
+  var secondButton = document.getElementById("secondButton");
+
+  var check0 = document.getElementById("check0");
+  var check1 = document.getElementById("check1");
+  var check2 = document.getElementById("check2");
+  var check3 = document.getElementById("check3");
+  var check4 = document.getElementById("check4");
+  var check5 = document.getElementById("check5");
+  var check6 = document.getElementById("check6");
 
 
+  if(check0.checked == true && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false){
+      firstButton.disabled = false;
+      secondButton.disabled = true;
+      checked++;
+  }
+  else if(check0.checked == false && check1.checked == true && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false  ){
+      firstButton.disabled = false;
+      secondButton.disabled = true;
+      checked++;
+  }
+  else if(check0.checked == false && check1.checked == false && check2.checked == true && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false  ){
+      firstButton.disabled = false;
+      secondButton.disabled = true;
+      checked++;
+  }
+  else if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == true && check4.checked == false && check5.checked == false && check6.checked == false  ){
+      firstButton.disabled = false;
+      secondButton.disabled = true;
+      checked++;
+  }
+  else if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == true && check5.checked == false && check6.checked == false  ){
+      firstButton.disabled = false;
+      secondButton.disabled = true;
+      checked++;
+  }
+  else if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == true && check6.checked == false  ){
+      firstButton.disabled = false;
+      secondButton.disabled = true;
+  }
+  else if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == true  ){
+      firstButton.disabled = false;
+      secondButton.disabled = true;
+      checked++;
+  }
+  if(checked == 2){
+    firstButton.disabled = true;
+    secondButton.disabled = false;
+  }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//version 2
-
-
-// // create an element
-// const createNode = (elem) => {
-//     return document.createElement(elem);
-// };
-
-// // append an element to parent
-// const appendNode = (parent, elem) => {
-//     parent.appendChild(elem);
-// }
-
-// // List Element
-// const ul = document.querySelector('#users');
-
-// // GitHub API URL
-// const url = 'https://api.github.com/users';
-
-// fetch(url)
-              
-//     .then(res=> res.json()) 
-//             //transforme le fichier json en javascript
-    
-//     .then(data => {    // on obtient lobjet js cree plus haut
-//         // iterate over users
-//         data.map((user) => {
-//             // create the elements
-//             let li = createNode('li'),
-//                 img = createNode('img'),
-//                 span = createNode('span');
-//             img.src = user.avatar_url;
-//             span.innerText = user.login;
-//             // append all elements
-//             appendNode(li, img);
-//             appendNode(li, span);
-//             appendNode(ul, li);
-//         });             
-//     })
-//     .catch(err => {   //regarde si une erreur s'est incruste
-//         console.log('error: ' + err);
-            
-//     });
-
-
-
-
-
-
-
-//version 3
-
-
-// let name = [], date = [], type = [], abreviation, fullname, mainObj = {};
-
-// let showObj = function(){
-
-//     for ( let prop in mainObj){
-//         console.log(prop);
-//         console.log(mainObj[prop]);
-//     };
-// }
-
-// fetch('https://log2420-serve.herokuapp.com/JSON/output.json')
-            
-
-    
-//     .then(function (response) {
-//         return response.json();    //transforme le fichier json en javascript
-//     })
-//     .then(function (data) {    // on obtient lobjet js cree plus haut
-              
-//         appendData(data.Elections)
-//         appendDataAgain(data.PartisFederaux)
-//         appendDataAgain(data.PartisProvinciaux)
-
-//         mainObj = data;
-//         showObj();
-//     })
-//     .catch(function (err) {   //regarde si une erreur s'est incruste
-//         console.log('error: ' + err);
-            
-//     });
-
-// function appendData(data) {
-    
-//     var mainContainer = document.getElementById("myData")
-//     for (var i = 0; i < data.length; i++) {
-//         name = data[i].name;
-//         date = data[i].date;
-//         type = data[i].type;
-
-//         var div = document = 'name: ' + name + ' ' + date + ' ' + type;
-//         mainContainer.appendChild(div);
-  
-//     }
-// }
-
-// function appendDataAgain(data) {
-    
-//     for (var i = 0; i < data.length; i++) {
-//         abreviation = data[i].abreviation;
-//         fullname = data[i].fullname;
-//     }
-// }
+function uncheckAll() {
+  $("input[type='checkbox']:checked").prop("checked", false)
+}
+$(':radio').on('click', uncheckAll)

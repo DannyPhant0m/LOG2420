@@ -22,25 +22,31 @@
 
 <body>
     <nav class="navbar navbar-light" style="background-color: #2196F3;">
-        <a class="navbar-brand" href="#">PHAROS</a>
+        <a class="navbar-brand"><div id="title"> PHAROS </div></a>
         <div id="search_Bar"><i class="material-icons">search</i></div>
         <div id="three_Dots" ><i class="material-icons">more_vert</i></div>
     </nav>
 
     <div id ="backspace" onclick = "document.location = 'main.html'"><i class="material-icons" >arrow_back</i></div>
     
-    <div class = "card-header">
-        <div id= "star1"><i class="material-icons">star_border</i></div>
-        <div id="npd">N.P.D.</div>    
+    <div class="container-fluid">
+        <div class = "row">
+            <div class = "col-md">
+                <div id="npd">
+                    <div id="textnpd">N.P.D.</div> 
+                    <div id= "star1"><i class="material-icons">star_border</i></div> 
+                </div>         
+            </div>   
+        </div>
     </div>
-
+    
     <div id="scrollContent">
         <div class="container-fluid text-center"> 
             <div class= "row">
                 <div class="col-md">
                     <div id = "environnement">
                         <h1 id="titre1"> Environnement</h1>
-                        <div id= "star" onclick ="swapImages('star','star_border','doggy.png')"><i class="material-icons">star_border</i></div>
+                        <div id= "star"><i class="material-icons">star_border</i></div>
                     </div>
                 </div>
                 <div class="col-md">
@@ -125,12 +131,6 @@
                         <div id="lorem_ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</div>
                     </div>                
                 </div>
-               
-
-
-
-
-
             </div>
         </div>
     </div>

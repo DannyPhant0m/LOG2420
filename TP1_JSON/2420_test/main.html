@@ -22,7 +22,7 @@
 
 <body>
     <nav class="navbar navbar-light" style="background-color: #2196F3;">
-        <a class="navbar-brand" href="#">PHAROS</a>
+        <a class="navbar-brand"><div id="title"> PHAROS </div></a>
         <div id="search_Bar"><i class="material-icons">search</i></div>
         <div id="three_Dots" ><i class="material-icons">more_vert</i></div>
     </nav>
@@ -35,16 +35,16 @@
                 
                     <h1 id="box1_Titre">Élections</h1>
 
-                    <input id = "firstRadio" type="radio" checked name= "none" onclick ="showFederaux()"></input>
+                    <input id = "firstRadio" type="radio" checked name= "none" onclick ="showFederaux(); uncheckAll()"></input>
                     <div id="box1_0_nom"></div><div id="box1_0_date"></div>
                    
-                    <input id = "secondRadio" type="radio" name = "none" onclick ="showProvinciaux()"></input>
+                    <input id = "secondRadio" type="radio" name = "none" onclick ="showFederaux(); uncheckAll()"></input>
                     <div id="box1_1_nom"></div><div id="box1_1_date"></div>
                    
-                    <input id = "thirdRadio" type="radio" name = "none" onclick ="showFederaux()"></input>
+                    <input id = "thirdRadio" type="radio" name = "none" onclick ="showFederaux(); uncheckAll()"></input>
                     <div id="box1_2_nom"></div><div id="box1_2_date"></div>
                     
-                    <input id = "fourthRadio" type="radio" name = "none" onclick ="showProvinciaux()"></input>
+                    <input id = "fourthRadio" type="radio" name = "none" onclick ="showFederaux(); uncheckAll()"></input>
                     <div id="box1_3_nom"></div><div id="box1_3_date"></div>
                 </div>
             </div>
@@ -54,49 +54,49 @@
             <div class="col-md">
                 <div id ="federaux">
                     
-                        <h1 id="box2_Titre">Partis politiques fédéraux</h1>
+                        <h1 id="box2_Titre">Partis politiques fédéreaux</h1>
         
-                        <input type="checkbox" name= "fun"></input>
+                        <input type="checkbox" id="check0" onclick = "linkCheckBoxes()" name= "fun"></input>
                         <div id="box2_0_abv"></div><div id="box2_0_fn"></div>
                         
-                        <input type="checkbox" name= "fun"></input>
+                        <input type="checkbox" id="check1" onclick = "linkCheckBoxes()" name= "fun"></input>
                         <div id="box2_1_abv"></div><div id="box2_1_fn"></div>
                         
-                        <input type="checkbox" name= "fun"></input>
+                        <input type="checkbox" id="check2" onclick = "linkCheckBoxes()" name= "fun"></input>
                         <div id="box2_2_abv"></div><div id="box2_2_fn"></div>
                         
-                        <input type="checkbox" name= "fun"></input>
+                        <input type="checkbox" id="check3" onclick = "linkCheckBoxes()" name= "fun"></input>
                         <div id="box2_3_abv"></div><div id="box2_3_fn"></div>
 
-                        <input type="checkbox" name= "fun"></input>
+                        <input type="checkbox" id="check4" onclick = "linkCheckBoxes()" name= "fun"></input>
                         <div id="box2_4_abv"></div><div id="box2_4_fn"></div>
 
-                        <input type="checkbox" name= "fun"></input>
+                        <input type="checkbox" id="check5" onclick = "linkCheckBoxes()" name= "fun"></input>
                         <div id="box2_5_abv"></div><div id="box2_5_fn"></div>
                 </div>  
             </div>
             <div class="col-md">
                 <div id = "provinciaux" style="display: none";>                   
                     <h1 id="box3_Titre">Partis politiques provinciaux</h1>
-                    <input type="checkbox" name= "fun"></input>
+                    <input type="checkbox" id="check0" name= "fun"></input>
                     <div id="box3_0_abv"></div><div id="box3_0_fn"></div>
 
-                    <input type="checkbox" name= "fun"></input>
+                    <input type="checkbox" id="check1" onclick = "linkCheckBoxes()" name= "fun"></input>
                     <div id="box3_1_abv"></div><div id="box3_1_fn"></div>
                         
-                    <input type="checkbox" name= "fun"></input>
+                    <input type="checkbox" id="check2" onclick = "linkCheckBoxes()" name= "fun"></input>
                     <div id="box3_2_abv"></div><div id="box3_2_fn"></div>
                                     
-                    <input type="checkbox" name= "fun"></input>
+                    <input type="checkbox" id="check3" onclick = "linkCheckBoxes()" name= "fun"></input>
                     <div id="box3_3_abv"></div><div id="box3_3_fn"></div>
                         
-                    <input type="checkbox" name= "fun"></input>
+                    <input type="checkbox" id="check4" onclick = "linkCheckBoxes()" name= "fun"></input>
                     <div id="box3_4_abv"></div><div id="box3_4_fn"></div>
                         
-                    <input type="checkbox" name= "fun"></input>
+                    <input type="checkbox" id="check5" onclick = "linkCheckBoxes()" name= "fun"></input>
                     <div id="box3_5_abv"></div><div id="box3_5_fn"></div>
                         
-                    <input type="checkbox" name= "fun"></input>
+                    <input type="checkbox" id="check6" onclick = "linkCheckBoxes()" name= "fun"></input>
                     <div id="box3_6_abv"></div><div id="box3_6_fn"></div>
                 </div>    
             </div>
@@ -106,8 +106,16 @@
             <div class="col-md-1">
                 <div id="fourthBox">
                     <div id="box4_Titre">Actions</div>
-                    <button id="firstButton" class = "button" onclick = "document.location = 'propositions_connaitre.html'">Connaitre les propositions...</button>
-                    <button id="secondButton" class = "button" onclick = "document.location = 'propositions_comparer.html'"> Comparer deux propositions... </button>
+                    <button id="firstButton" class = "button" disabled onclick = "document.location = 'propositions_connaitre.html'">
+                        <div id="connaitre">
+                            Connaitre les propositions...                           
+                        </div>
+                    </button>
+                    <button id="secondButton" class = "button" disabled onclick = "document.location = 'propositions_comparer.html'">
+                        <div id="comparer">
+                            Comparer deux propositions...
+                        </div>  
+                    </button>
                 </div>   
             </div>
         </div>

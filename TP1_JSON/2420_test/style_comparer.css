@@ -1,4 +1,5 @@
-/*PAGE 2 CONNNAITRE */
+/*PAGE 2 COMPARER */
+
 /*BACKGROUND COLOR OF WEBSITE*/
 
 body {
@@ -11,7 +12,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    overflow-y: hidden;
 }
 
 
@@ -72,7 +72,7 @@ body {
 
 #backspace{
     margin-left: 38px;
-    margin-top: 20px;
+    margin-top: 21px;
     margin-right:1200px;
     font-size: 24px;
     color: rgb(117, 117, 117);
@@ -80,18 +80,70 @@ body {
     cursor:pointer;
 }
 
+.container-fluid {
+    border-width: 0px;
+    position: absolute;
+
+    width: 1048px;
+    height: 624px;
+    display: flex;
+
+}
+
+#scrollContent{
+    position: absolute;
+    left: 112px;
+    top: 170px;
+    width: 1052px;
+    height: 624px;
+    border-width: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+   
+}
+
+#star{
+    text-align: right;
+    margin-right: 66px;
+    top:32px;
+    position: relative;
+    cursor: pointer;
+}
+#star1{
+    text-align: right;
+    margin-right: 62px;
+    top:0px;
+    position: relative;
+    cursor: pointer;
+}
+
+
 #npd{
-    width: 1019px;
+    width: 503px;
     height: 73px;
     background-color: rgba(229, 229, 229, 1);
     border-style: solid;
     border-color: rgba(229, 229, 229, 1);
     border-width: 1px;
     margin-left: 112px;
-    margin-top: 3px;
+    margin-top: -25px;
+    
+}
+#pvc{
+    width: 503px;
+    height: 73px;
+    background-color: rgba(229, 229, 229, 1);
+    border-style: solid;
+    border-color: rgba(121, 121, 121, 1);
+    border-width: 1px;
+    margin-left: 628px;
+    margin-top: -360px;
+    position: relative;
+    
 }
 
-#textnpd{
+#textnpd,#textpvc{
     font-family: 'Roboto';
     font-weight: 400;
     font-style: normal;
@@ -99,58 +151,16 @@ body {
     color: #000000;
     position: relative;
     left:21px;
-    top:29px;
+    top:32px;
 
-}
-
-
-#star1{
-    text-align: right;
-    top:-3px;
-    right: 60px;
-    position: relative;
-    cursor:pointer;
-    
-
-}
-.container-fluid {
-    border-width: 0px;
-    position: absolute;
-
-    height: 2000px;
-    width:1019px;
-    display: flex;
-    
-
-}
-#scrollContent{
-    position: absolute;
-    left: 112px;
-    top: 196px;
-    width: 1052px;
-    height: 624px;
-    border-width: 0px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-   
-}
-
-#star{
-    text-align: right;
-    margin-right: 60px;
-    top:31px;
-    position: relative;
-    cursor: pointer;
 }
 #environnement,#education,#sante,#immigration,#econo,#arts,#transport,#energie{
-    width: 1019px;
+    width: 503px;
     height: 73px;
     background-color: rgba(255, 255, 255, 1);
     border-color: rgb(215, 215, 215);
     border-style: solid;
-    border-color: rgb(215, 215, 215);
     border-width: 1px;
-
 
 }
 #titre1,#titre2,#titre3,#titre4,#titre5,#titre6,#titre7,#titre8{
@@ -161,14 +171,14 @@ body {
     font-size: 20px;
     color: #333333;
     text-align:left;
-    top: 33px;
+    top: 36px;
     left:37px;
     position: absolute;
 }
 
 #lorem_ipsum{
   
-    width: 1019px;
+    width: 503px;
     height: 235px;
     
     background: rgba(255, 255, 255, 1);
@@ -176,16 +186,14 @@ body {
     border-style: solid;
     border-color: rgb(215, 215, 215);
     border-radius: 0px;
-  
+    margin-right: 13px;
 }
-
 #lorem_ipsum_text{
 
     font-size: 14px;
     text-align: left;
-    margin-left: 19px;
-    margin-top: 66px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-top: 11px;
     font-family: Arial;
     font-weight: 400;
     font-style: normal;

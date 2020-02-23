@@ -16,14 +16,17 @@ body {
 /*/navigation bar */
 .navbar-brand {
     font-family: 'Roboto Bold', 'Roboto Regular', 'Roboto';
-    color: grey;
+    color: #FFFFFF;
     font-size: 30px;
     margin: 0px;
     font-weight: 700;
-    left: 60px;
-    top: 23px;
+    left: 6.1px;
+    top: 3.2px;
     width: 120px;
-    height : 47px;
+    height : 48px;
+    position: relative;
+    cursor: pointer;
+    
 }
 
 
@@ -31,6 +34,9 @@ body {
     color:#fff;
 }
 
+#title{
+    color: #FFFFFF;
+}
 #search_Bar {
     border-width: 0px;
     position: absolute;
@@ -84,7 +90,7 @@ body {
 
 #firstBox{
     border-width: 0px;
-    left: 0px;
+    left: -15px;
     top: 0px;
     width: 356px;
     height: 700px;
@@ -92,6 +98,7 @@ body {
     border-radius: 2px;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.219607843137255);
     background-color: rgba(255, 255, 255, 1);
+    position: relative;
 }
 #box1_Titre {
     font-family:Arial;
@@ -100,18 +107,23 @@ body {
     font-size: 20px;
     text-align: left;
     margin-left: 20px;
+    position: relative;
+    top:10px;
     
  
 }
 
 #box1_0_nom {
-    font-family: 'Arial';
+    font-family: 'Roboto';
     font-weight: 400;
     font-style: normal;
     text-align: left;
     margin-left: 64px;
     margin-top: 41px;
     line-height:5px;
+    position: relative;
+    left: 12px;
+    top: 3px;
 }
 
 
@@ -124,6 +136,9 @@ body {
     margin-left: 64px;
     margin-top: 41px;
     line-height: 5px;
+    position: relative;
+    left: 12px;
+    top: 3px;
 }
 
 #box1_2_nom {
@@ -135,6 +150,9 @@ body {
     margin-left: 64px;
     margin-top: 45px;
     line-height: 5px;
+    position: relative;
+    left: 12px;
+    top: 3px;
 }
 
 #box1_3_nom {
@@ -146,6 +164,9 @@ body {
     margin-left: 64px;
     margin-top: 45px;
     line-height: 5px;
+    position: relative;
+    left: 12px;
+    top: 3px;
 }
 
 #box1_0_date,#box1_1_date,#box1_2_date,#box1_3_date {
@@ -157,6 +178,9 @@ body {
    text-align: left;
    margin-left:64px;
    line-height: 2.5;
+   position: relative;
+   left:12px;
+   top:3px;
 
 }
 
@@ -198,16 +222,31 @@ body {
    
 }
 /*Second Box*/ /******/ /*Third Box*/
-#federaux , #provinciaux{
+#federaux{
     border-width: 0px;
-    left: 0px;
-    top: 0px;
+    left: 9px;
+    top: 11px;
+    width: 360px;
+    height: 700px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.219607843137255);
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+}
+
+#provinciaux{
+    border-width: 0px;
+    left: -24px;
+    top: 11px;
     width: 356px;
     height: 700px;
     border: none;
     border-radius: 2px;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.219607843137255);
     background-color: rgba(255, 255, 255, 1);
+    position: relative;
+    
 }
 
 #box2_Titre, #box3_Titre {
@@ -217,9 +256,43 @@ body {
     font-size: 20px;
     margin-left: -73px;
     margin-top: -10px;
+    position: relative;
+    top: 10px;
+    left: 5px;
 }
 
+#check0,#check1,#check2,#check3,#check4,#check5,#check6{
+    margin-right: 60px;
+    margin-left: -210px;
+    margin-bottom: -20px;
+    position: relative;
+    top:25px;
+}
 
+#box2_0_abv,#box2_1_abv,#box2_2_abv, #box2_3_abv, #box2_4_abv, #box2_5_abv,
+#box3_0_abv,#box3_1_abv,#box3_2_abv, #box3_3_abv, #box3_4_abv, #box3_5_abv,#box3_6_abv {
+    margin-right: 0px;
+    margin-left: -145px;
+    
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    
+}
+
+#box2_0_fn,#box2_1_fn,#box2_2_fn,#box2_3_fn,#box2_4_fn,#box2_5_fn,
+#box3_0_fn,#box3_1_fn,#box3_2_fn,#box3_3_fn,#box3_4_fn,#box3_5_fn,#box3_6_fn{
+
+    margin-right: 0px;
+    margin-left: 87px;
+    text-align: left;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.537254901960784);
+    font-size: 14px;
+}
 /*fourth box */
 #fourthBox{
     border-width: 0px;
@@ -232,6 +305,8 @@ body {
     background-color: rgba(255, 255, 255, 1);
     border: none;
     border-radius: 2px;
+    margin-left: 15px;
+    margin-top: 3px;
 }
 #box4_Titre {
     font-family: 'Roboto';
@@ -239,7 +314,8 @@ body {
     font-style: normal;
     font-size: 16px;
     text-align: left;
-    margin-left: 17px;
+    margin-left: 14px;
+    margin-top: 8px;
 }
 
 
@@ -253,5 +329,26 @@ body {
     border : none;
     width:214px;
     cursor:pointer;
+}
+
+#firstButton{
+    margin-top: 23px;
+    line-height: 35px;
+    margin-left: -8px;
+    background-color: rgba(215, 215, 215, 1);
+    
+}
+
+#secondButton{
+    margin-top:30px;
+    line-height: 35px;
+    margin-left: -8px;
+    background-color: rgba(215, 215, 215, 1);
+}
+
+#connaitre,#comparer{
+    font-family: 'Roboto Medium', 'Roboto Regular', 'Roboto';
+    font-weight: bold;
+    
 }
 
