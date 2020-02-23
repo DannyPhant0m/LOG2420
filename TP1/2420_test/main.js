@@ -177,40 +177,48 @@ function linkCheckBoxes(){
   if(check0.checked == true && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false){
       firstButton.disabled = false;
       secondButton.disabled = true;
-      checked++;
+      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
+      firstButton.style.color = "white";
   }
-  else if(check0.checked == false && check1.checked == true && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false  ){
+  if(check0.checked == false && check1.checked == true && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false  ){
       firstButton.disabled = false;
       secondButton.disabled = true;
-      checked++;
+      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
+      firstButton.style.color = "white";
   }
-  else if(check0.checked == false && check1.checked == false && check2.checked == true && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false  ){
+  if(check0.checked == false && check1.checked == false && check2.checked == true && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false  ){
       firstButton.disabled = false;
       secondButton.disabled = true;
-      checked++;
+      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
+      firstButton.style.color = "white";
+     
   }
-  else if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == true && check4.checked == false && check5.checked == false && check6.checked == false  ){
+  if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == true && check4.checked == false && check5.checked == false && check6.checked == false  ){
       firstButton.disabled = false;
       secondButton.disabled = true;
-      checked++;
+      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
+      firstButton.style.color = "white";
   }
-  else if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == true && check5.checked == false && check6.checked == false  ){
+  if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == true && check5.checked == false && check6.checked == false  ){
       firstButton.disabled = false;
       secondButton.disabled = true;
-      checked++;
+      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
+      firstButton.style.color = "white";
   }
-  else if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == true && check6.checked == false  ){
+  if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == true && check6.checked == false  ){
       firstButton.disabled = false;
       secondButton.disabled = true;
+      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
+      firstButton.style.color = "white";
   }
-  else if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == true  ){
+  if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == true  ){
       firstButton.disabled = false;
       secondButton.disabled = true;
-      checked++;
+      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
+      firstButton.style.color = "white";
   }
-  if(checked == 2){
-    firstButton.disabled = true;
-    secondButton.disabled = false;
+  else{
+    firstButton.style.display = "firstButton";
   }
 }
 
@@ -219,3 +227,15 @@ function uncheckAll() {
   $("input[type='checkbox']:checked").prop("checked", false)
 }
 $(':radio').on('click', uncheckAll)
+
+
+$('.buttonFun').prop('disabled', !$('.buttonFun:checked').length); //initially disable/enable button based on checked length
+$('input[type=checkbox]').click(function() {
+  console.log($('.buttonFun:checkbox:checked').length);
+  if ($('.buttonFun:checkbox:checked').length == 1) {
+    $('.buttonFun').prop('disabled', false);
+  } else {
+    $('.buttonFun').prop('disabled', true);
+  }
+});
+

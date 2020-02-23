@@ -56,47 +56,49 @@
                     
                         <h1 id="box2_Titre">Partis politiques fédéreaux</h1>
         
-                        <input type="checkbox" id="check0" onclick = "linkCheckBoxes()" name= "fun"></input>
+                        <input type="checkbox" id="check0" onclick = "linkCheckBoxes()"></input>
                         <div id="box2_0_abv"></div><div id="box2_0_fn"></div>
                         
-                        <input type="checkbox" id="check1" onclick = "linkCheckBoxes()" name= "fun"></input>
+                        <input type="checkbox" id="check1" onclick = "linkCheckBoxes()"></input>
                         <div id="box2_1_abv"></div><div id="box2_1_fn"></div>
                         
-                        <input type="checkbox" id="check2" onclick = "linkCheckBoxes()" name= "fun"></input>
+                        <input type="checkbox" id="check2" onclick = "linkCheckBoxes()"></input>
                         <div id="box2_2_abv"></div><div id="box2_2_fn"></div>
                         
-                        <input type="checkbox" id="check3" onclick = "linkCheckBoxes()" name= "fun"></input>
+                        <input type="checkbox" id="check3" onclick = "linkCheckBoxes()"></input>
                         <div id="box2_3_abv"></div><div id="box2_3_fn"></div>
 
-                        <input type="checkbox" id="check4" onclick = "linkCheckBoxes()" name= "fun"></input>
+                        <input type="checkbox" id="check4" onclick = "linkCheckBoxes()"></input>
                         <div id="box2_4_abv"></div><div id="box2_4_fn"></div>
 
-                        <input type="checkbox" id="check5" onclick = "linkCheckBoxes()" name= "fun"></input>
+                        <input type="checkbox" id="check5" onclick = "linkCheckBoxes()"></input>
                         <div id="box2_5_abv"></div><div id="box2_5_fn"></div>
                 </div>  
             </div>
             <div class="col-md">
-                <div id = "provinciaux" style="display: none";>                   
+                <div id = "provinciaux" style="display: none";>     
+
                     <h1 id="box3_Titre">Partis politiques provinciaux</h1>
-                    <input type="checkbox" id="check0" name= "fun"></input>
+
+                    <input type="checkbox" id="check0" onclick = "linkCheckBoxes()"></input>
                     <div id="box3_0_abv"></div><div id="box3_0_fn"></div>
 
-                    <input type="checkbox" id="check1" onclick = "linkCheckBoxes()" name= "fun"></input>
+                    <input type="checkbox" id="check1" onclick = "linkCheckBoxes()"></input>
                     <div id="box3_1_abv"></div><div id="box3_1_fn"></div>
                         
-                    <input type="checkbox" id="check2" onclick = "linkCheckBoxes()" name= "fun"></input>
+                    <input type="checkbox" id="check2" onclick = "linkCheckBoxes()"></input>
                     <div id="box3_2_abv"></div><div id="box3_2_fn"></div>
                                     
-                    <input type="checkbox" id="check3" onclick = "linkCheckBoxes()" name= "fun"></input>
+                    <input type="checkbox" id="check3" onclick = "linkCheckBoxes()"></input>
                     <div id="box3_3_abv"></div><div id="box3_3_fn"></div>
                         
-                    <input type="checkbox" id="check4" onclick = "linkCheckBoxes()" name= "fun"></input>
+                    <input type="checkbox" id="check4" onclick = "linkCheckBoxes()"></input>
                     <div id="box3_4_abv"></div><div id="box3_4_fn"></div>
                         
-                    <input type="checkbox" id="check5" onclick = "linkCheckBoxes()" name= "fun"></input>
+                    <input type="checkbox" id="check5" onclick = "linkCheckBoxes()"></input>
                     <div id="box3_5_abv"></div><div id="box3_5_fn"></div>
                         
-                    <input type="checkbox" id="check6" onclick = "linkCheckBoxes()" name= "fun"></input>
+                    <input type="checkbox" id="check6" onclick = "linkCheckBoxes()"></input>
                     <div id="box3_6_abv"></div><div id="box3_6_fn"></div>
                 </div>    
             </div>
@@ -106,12 +108,12 @@
             <div class="col-md-1">
                 <div id="fourthBox">
                     <div id="box4_Titre">Actions</div>
-                    <button id="firstButton" class = "button" disabled onclick = "document.location = 'propositions_connaitre.html'">
+                    <button id="firstButton" type="submit" class = "button" disabled onclick = "document.location = 'propositions_connaitre.html'">
                         <div id="connaitre">
                             Connaitre les propositions...                           
                         </div>
                     </button>
-                    <button id="secondButton" class = "button" disabled onclick = "document.location = 'propositions_comparer.html'">
+                    <button id="secondButton" type ="submit" class = "button" onclick = "document.location = 'propositions_comparer.html'">
                         <div id="comparer">
                             Comparer deux propositions...
                         </div>  
