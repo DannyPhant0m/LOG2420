@@ -1,5 +1,10 @@
 //version 1
 
+//taches a faire max:
+// swap le; simages pour les etoiles
+// finir la fonction de link check pour les 2 bouttons 
+
+
 fetch('https://log2420-serve.herokuapp.com/JSON/output.json')
             
     .then(function (response) {
@@ -160,7 +165,7 @@ function swapImages(id,primary,secondary) {
   }
 }
 
-function linkCheckBoxes(){
+function linkCheckBoxes(){   //plus facile , trouve une fonction ou quand cest checked une fois, le 1er button active, 2 checked 2ieme bouton active
 
   var firstButton = document.getElementById("firstButton");
   var secondButton = document.getElementById("secondButton");
