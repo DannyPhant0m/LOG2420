@@ -1,9 +1,7 @@
-//version 1
 
 //taches a faire max:
-// swap le; simages pour les etoiles
-// finir la fonction de link check pour les 2 bouttons 
-
+// swap les simages pour les etoiles
+//voir la fin du fichier js pour les 2 implementations possibles
 
 fetch('https://log2420-serve.herokuapp.com/JSON/output.json')
             
@@ -57,7 +55,6 @@ function addElementElections (data) {
   document.getElementById("box2_5_abv").innerHTML = data.PartisFederaux[5].abreviation;
   document.getElementById("box2_5_fn").innerHTML = data.PartisFederaux[5].fullname;
 
-
   //PartisProvinciaux//
   document.getElementById("box3_0_abv").innerHTML = data.PartisProvinciaux[0].abreviation;
   document.getElementById("box3_0_fn").innerHTML = data.PartisProvinciaux[0].fullname;
@@ -80,8 +77,6 @@ function addElementElections (data) {
   document.getElementById("box3_6_abv").innerHTML = data.PartisProvinciaux[6].abreviation;
   document.getElementById("box3_6_fn").innerHTML = data.PartisProvinciaux[6].fullname;
 }
-
-
 
 function switchRadio_1() {
   if($('#btn_cerclePlein_1').css('display') == 'none')
@@ -152,6 +147,93 @@ function showProvinciaux(){
 }
 
 
+
+function linkCheckBoxes(){
+   
+  var count = 0;
+
+  var firstButton = document.getElementById("firstButton");
+  var secondButton = document.getElementById("secondButton");
+  
+  var check0 = document.getElementById("check0");
+  var check1 = document.getElementById("check1");
+  var check2 = document.getElementById("check2");
+  var check3 = document.getElementById("check3");
+  var check4 = document.getElementById("check4");
+  var check5 = document.getElementById("check5");
+  var check6 = document.getElementById("check6");
+  var check7 = document.getElementById("check7");
+  var check8 = document.getElementById("check8");
+  var check9 = document.getElementById("check9");
+  var check10 = document.getElementById("check10");
+  var check11 = document.getElementById("check11");
+  var check12 = document.getElementById("check12");
+
+  if(check0.checked == true){count++;}
+  if(check1.checked == true){count++;}
+  if(check2.checked == true){count++;}
+  if(check3.checked == true){count++;}
+  if(check4.checked == true){count++;}
+  if(check5.checked == true){count++;}
+  if(check6.checked == true){count++;}
+  if(check7.checked == true){count++;}
+  if(check8.checked == true){count++;}
+  if(check9.checked == true){count++;}
+  if(check10.checked == true){count++;}
+  if(check11.checked == true){count++;}
+  if(check12.checked == true){count++;}
+
+  if (count == 1){
+    firstButton.disabled = false;
+    secondButton.disabled = true;
+    firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
+    firstButton.style.color = "white";
+    secondButton.style.backgroundColor = "rgba(215, 215, 215, 1)";
+    secondButton.style.color = "#7F7F7F";
+  }
+  if (count == 2){
+    firstButton.disabled = true;
+    secondButton.disabled = false;
+    secondButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
+    secondButton.style.color = "white";
+    firstButton.style.backgroundColor = "rgba(215, 215, 215, 1)";
+    firstButton.style.color = "#7F7F7F";
+  }
+  if(count > 2 || count == 0){
+    firstButton.style.backgroundColor = "rgba(215, 215, 215, 1)";
+    firstButton.style.color = "#7F7F7F";
+    secondButton.style.backgroundColor = "rgba(215, 215, 215, 1)";
+    secondButton.style.color = "#7F7F7F";
+  }
+}
+
+function uncheckAll() {
+  $("input[type='checkbox']:checked").prop("checked", false)
+}
+$(':radio').on('click', uncheckAll)
+
+$('.buttonFun').prop('disabled', !$('.buttonFun:checked').length); //initially disable/enable button based on checked length
+$('input[type=checkbox]').click(function() {
+  console.log($('.buttonFun:checkbox:checked').length);
+  if ($('.buttonFun:checkbox:checked').length == 1) {
+    $('.buttonFun').prop('disabled', false);
+  } else {
+    $('.buttonFun').prop('disabled', true);
+  }
+});
+
+
+//1er implemntation 
+document.getElementById("star").onclick = function() {
+  document.getElementById("doggy.png").src = this.src;
+}
+
+document.getElementById("icon2").onclick = function() {
+  document.getElementById("mainImage").src = this.src;
+}
+
+
+//2ieme implementation
 function swapImages(id,primary,secondary) {
   src=document.getElementById(id).src;
   if (src.match(primary)) {
@@ -164,83 +246,3 @@ function swapImages(id,primary,secondary) {
       return false;
   }
 }
-
-function linkCheckBoxes(){   //plus facile , trouve une fonction ou quand cest checked une fois, le 1er button active, 2 checked 2ieme bouton active
-
-  var firstButton = document.getElementById("firstButton");
-  var secondButton = document.getElementById("secondButton");
-
-  var check0 = document.getElementById("check0");
-  var check1 = document.getElementById("check1");
-  var check2 = document.getElementById("check2");
-  var check3 = document.getElementById("check3");
-  var check4 = document.getElementById("check4");
-  var check5 = document.getElementById("check5");
-  var check6 = document.getElementById("check6");
-
-
-  if(check0.checked == true && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false){
-      firstButton.disabled = false;
-      secondButton.disabled = true;
-      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
-      firstButton.style.color = "white";
-  }
-  if(check0.checked == false && check1.checked == true && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false  ){
-      firstButton.disabled = false;
-      secondButton.disabled = true;
-      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
-      firstButton.style.color = "white";
-  }
-  if(check0.checked == false && check1.checked == false && check2.checked == true && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == false  ){
-      firstButton.disabled = false;
-      secondButton.disabled = true;
-      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
-      firstButton.style.color = "white";
-     
-  }
-  if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == true && check4.checked == false && check5.checked == false && check6.checked == false  ){
-      firstButton.disabled = false;
-      secondButton.disabled = true;
-      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
-      firstButton.style.color = "white";
-  }
-  if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == true && check5.checked == false && check6.checked == false  ){
-      firstButton.disabled = false;
-      secondButton.disabled = true;
-      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
-      firstButton.style.color = "white";
-  }
-  if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == true && check6.checked == false  ){
-      firstButton.disabled = false;
-      secondButton.disabled = true;
-      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
-      firstButton.style.color = "white";
-  }
-  if(check0.checked == false && check1.checked == false && check2.checked == false && check3.checked == false && check4.checked == false && check5.checked == false && check6.checked == true  ){
-      firstButton.disabled = false;
-      secondButton.disabled = true;
-      firstButton.style.backgroundColor = "rgba(33, 150, 243, 1)";
-      firstButton.style.color = "white";
-  }
-  else{
-    firstButton.style.display = "firstButton";
-  }
-}
-
-
-function uncheckAll() {
-  $("input[type='checkbox']:checked").prop("checked", false)
-}
-$(':radio').on('click', uncheckAll)
-
-
-$('.buttonFun').prop('disabled', !$('.buttonFun:checked').length); //initially disable/enable button based on checked length
-$('input[type=checkbox]').click(function() {
-  console.log($('.buttonFun:checkbox:checked').length);
-  if ($('.buttonFun:checkbox:checked').length == 1) {
-    $('.buttonFun').prop('disabled', false);
-  } else {
-    $('.buttonFun').prop('disabled', true);
-  }
-});
-

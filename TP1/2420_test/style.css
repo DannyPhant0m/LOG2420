@@ -181,6 +181,7 @@ body {
    position: relative;
    left:12px;
    top:3px;
+   margin-bottom: -17px;
 
 }
 
@@ -199,7 +200,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 40px;
-    top: 150px;
+    top: 131px;
     display: flex;
    
 }
@@ -208,7 +209,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 40px;
-    top: 230px;
+    top: 200px;
     display: flex;
    
 }
@@ -217,7 +218,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 40px;
-    top: 310px;
+    top: 270px;
     display: flex;
    
 }
@@ -237,9 +238,9 @@ body {
 
 #provinciaux{
     border-width: 0px;
-    left: -24px;
+    left: -25px;
     top: 11px;
-    width: 356px;
+    width: 360px;
     height: 700px;
     border: none;
     border-radius: 2px;
@@ -249,7 +250,7 @@ body {
     
 }
 
-#box2_Titre, #box3_Titre {
+#box2_Titre {
     font-family: 'Arial';
     font-weight: 400;
     font-style: normal;
@@ -261,9 +262,29 @@ body {
     left: 5px;
 }
 
-#check0,#check1,#check2,#check3,#check4,#check5,#check6{
+#box3_Titre{
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    margin-left: -73px;
+    margin-top: -10px;
+    position: relative;
+    top: 10px;
+    left: 11.5px;
+}
+
+#check0,#check1,#check2,#check3,#check4,#check5{
     margin-right: 60px;
     margin-left: -210px;
+    margin-bottom: -20px;
+    position: relative;
+    top:25px;
+}
+
+#check6, #check7,#check8,#check9,#check10,#check11,#check12{
+    margin-right: 60px;
+    margin-left: -209px;
     margin-bottom: -20px;
     position: relative;
     top:25px;
@@ -272,12 +293,13 @@ body {
 #box2_0_abv,#box2_1_abv,#box2_2_abv, #box2_3_abv, #box2_4_abv, #box2_5_abv,
 #box3_0_abv,#box3_1_abv,#box3_2_abv, #box3_3_abv, #box3_4_abv, #box3_5_abv,#box3_6_abv {
     margin-right: 0px;
-    margin-left: -145px;
+    margin-left: 87px;
     
     font-family: 'Roboto';
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+    text-align: left;
     
 }
 
