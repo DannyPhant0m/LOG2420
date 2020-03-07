@@ -1,6 +1,6 @@
 
 //taches a faire max:
-// swap les simages pour les etoiles
+// swap les s'images pour les etoiles
 //voir la fin du fichier js pour les 2 implementations possibles
 
 fetch('https://log2420-serve.herokuapp.com/JSON/output.json')
@@ -155,33 +155,33 @@ function linkCheckBoxes(){
   var firstButton = document.getElementById("firstButton");
   var secondButton = document.getElementById("secondButton");
   
-  var check0 = document.getElementById("check0");
-  var check1 = document.getElementById("check1");
-  var check2 = document.getElementById("check2");
-  var check3 = document.getElementById("check3");
-  var check4 = document.getElementById("check4");
-  var check5 = document.getElementById("check5");
-  var check6 = document.getElementById("check6");
-  var check7 = document.getElementById("check7");
-  var check8 = document.getElementById("check8");
-  var check9 = document.getElementById("check9");
-  var check10 = document.getElementById("check10");
-  var check11 = document.getElementById("check11");
-  var check12 = document.getElementById("check12");
+  var fed0 = document.getElementById("fed0");
+  var fed1 = document.getElementById("fed1");
+  var fed2 = document.getElementById("fed2");
+  var fed3 = document.getElementById("fed3");
+  var fed4 = document.getElementById("fed4");
+  var fed5 = document.getElementById("fed5");
+  var prov0 = document.getElementById("prov0");
+  var prov1 = document.getElementById("prov1");
+  var prov2 = document.getElementById("prov2");
+  var prov3 = document.getElementById("prov3");
+  var prov4 = document.getElementById("prov4");
+  var prov5 = document.getElementById("prov5");
+  var prov6 = document.getElementById("prov6");
 
-  if(check0.checked == true){count++;}
-  if(check1.checked == true){count++;}
-  if(check2.checked == true){count++;}
-  if(check3.checked == true){count++;}
-  if(check4.checked == true){count++;}
-  if(check5.checked == true){count++;}
-  if(check6.checked == true){count++;}
-  if(check7.checked == true){count++;}
-  if(check8.checked == true){count++;}
-  if(check9.checked == true){count++;}
-  if(check10.checked == true){count++;}
-  if(check11.checked == true){count++;}
-  if(check12.checked == true){count++;}
+  if(fed0.checked == true){count++;}
+  if(fed1.checked == true){count++;}
+  if(fed2.checked == true){count++;}
+  if(fed3.checked == true){count++;}
+  if(fed4.checked == true){count++;}
+  if(fed5.checked == true){count++;}
+  if(prov0.checked == true){count++;}
+  if(prov1.checked == true){count++;}
+  if(prov2.checked == true){count++;}
+  if(prov3.checked == true){count++;}
+  if(prov4.checked == true){count++;}
+  if(prov5.checked == true){count++;}
+  if(prov6.checked == true){count++;}
 
   if (count == 1){
     firstButton.disabled = false;
@@ -200,11 +200,14 @@ function linkCheckBoxes(){
     firstButton.style.color = "#7F7F7F";
   }
   if(count > 2 || count == 0){
+    firstButton.disabled = true;
+    secondButton.disabled = true;
     firstButton.style.backgroundColor = "rgba(215, 215, 215, 1)";
     firstButton.style.color = "#7F7F7F";
     secondButton.style.backgroundColor = "rgba(215, 215, 215, 1)";
     secondButton.style.color = "#7F7F7F";
   }
+  return count;
 }
 
 function uncheckAll() {
@@ -244,3 +247,39 @@ function changeImage(element) {
       element.src = "star1.png";
   }
 }
+
+function saveInfo() {
+
+  //var count = linkCheckBoxes();
+  var fed0 = document.getElementById("fed0");
+  var fed1 = document.getElementById("fed1");
+  var fed2 = document.getElementById("fed2");
+  var fed3 = document.getElementById("fed3");
+  var fed4 = document.getElementById("fed4");
+  var fed5 = document.getElementById("fed5");
+  var prov0 = document.getElementById("prov0");
+  var prov1 = document.getElementById("prov1");
+  var prov2 = document.getElementById("prov2");
+  var prov3 = document.getElementById("prov3");
+  var prov4 = document.getElementById("prov4");
+  var prov5 = document.getElementById("prov5");
+  var prov6 = document.getElementById("prov6");
+  //sessionStorage.setItem("count", "count");
+
+  if(fed0.checked == true){sessionStorage.setItem("checkbox", "fed0");}
+  if(fed1.checked == true){sessionStorage.setItem("checkbox", "fed1");}
+  if(fed2.checked == true){sessionStorage.setItem("checkbox", "fed2");}
+  if(fed3.checked == true){sessionStorage.setItem("checkbox", "fed3");}
+  if(fed4.checked == true){sessionStorage.setItem("checkbox", "fed4");}
+  if(fed5.checked == true){sessionStorage.setItem("checkbox", "fed5");}
+
+  if(prov0.checked == true){sessionStorage.setItem("checkbox", "prov0");}
+  if(prov1.checked == true){sessionStorage.setItem("checkbox", "prov1");}
+  if(prov2.checked == true){sessionStorage.setItem("checkbox", "prov2");}
+  if(prov3.checked == true){sessionStorage.setItem("checkbox", "prov3");}
+  if(prov4.checked == true){sessionStorage.setItem("checkbox", "prov4");}
+  if(prov5.checked == true){sessionStorage.setItem("checkbox", "prov5");}
+  if(prov6.checked == true){sessionStorage.setItem("checkbox", "prov6");}
+
+  document.location = 'propositions_connaitre.html';
+  }

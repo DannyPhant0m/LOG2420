@@ -33,14 +33,14 @@
         <div class ="row">
             <div class="col-md">
                 <div id="npd">
-                    <div id= "textnpd">N.P.D.</div>
+                    <div id= "textParti1">N.P.D.</div>
                     <div id= "star1"><img src = "star1.png" onclick="changeImage()"></div>
                     
                 </div>
             </div>
             <div class="col-md">
                 <div id="pvc">
-                    <div id ="textpvc">P.V.C.</div>
+                    <div id ="textParti2">P.V.C.</div>
                     <div id= "star1"><i class="material-icons">star_border</i></div>
                 </div>
             </div>
@@ -231,6 +231,23 @@
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
+    <script type="text/javascript">
+        var checkedBox = sessionStorage.getItem("checkbox");
+        if(checkedBox === "fed0") {document.getElementById("textParti1").innerHTML = "P.L.C.";}
+        if(checkedBox === "fed1") {document.getElementById("textParti1").innerHTML = "P.C.C.";}
+        if(checkedBox === "fed2") {document.getElementById("textParti1").innerHTML = "B.Q.";}
+        if(checkedBox === "fed3") {document.getElementById("textParti1").innerHTML = "N.P.D.";}
+        if(checkedBox === "fed4") {document.getElementById("textParti1").innerHTML = "P.V.C.";}
+        if(checkedBox === "fed5") {document.getElementById("textParti1").innerHTML = "P.P.C.";}
+
+        if(checkedBox === "prov0") {document.getElementById("textParti1").innerHTML = "C.A.Q.";}
+        if(checkedBox === "prov1") {document.getElementById("textParti1").innerHTML = "P.L.Q.";}
+        if(checkedBox === "prov2") {document.getElementById("textParti1").innerHTML = "P.Q.";}
+        if(checkedBox === "prov3") {document.getElementById("textParti1").innerHTML = "P.V.Q.";}
+        if(checkedBox === "prov4") {document.getElementById("textParti1").innerHTML = "Q.S.";}
+        if(checkedBox === "prov5") {document.getElementById("textParti1").innerHTML = "P.C.Q.";}
+        if(checkedBox === "prov6") {document.getElementById("textParti1").innerHTML = "P.I.Q.";}
+</script>
 </body>
 </html>
