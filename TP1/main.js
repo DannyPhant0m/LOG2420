@@ -223,26 +223,24 @@ $('input[type=checkbox]').click(function() {
 });
 
 
-//1er implemntation 
-document.getElementById("star").onclick = function() {
-  document.getElementById("doggy.png").src = this.src;
-}
+// document.getElementById("star1").onclick = function() {
+//   Image.src("etoile.png") = this.src;
+// }
 
-document.getElementById("icon2").onclick = function() {
-  document.getElementById("mainImage").src = this.src;
-}
+// document.getElementById("star").onclick = function() {
+//   Image.src("etoile.png") = this.src;
+// }
 
 
-//2ieme implementation
-function swapImages(id,primary,secondary) {
-  src=document.getElementById(id).src;
-  if (src.match(primary)) {
-      document.getElementById(id).src=secondary;
+function changeImage(element) {
 
-      return true;
-  } else {
-    
-      document.getElementById(id).src=primary;
-      return false;
+  if (element.src == "star1.png") 
+  {      
+    console.log(element.src);
+      element.src = "etoile.png";
+  }
+  else 
+  {
+      element.src = "star1.png";
   }
 }
