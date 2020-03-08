@@ -112,8 +112,19 @@ function switchRadio_1() {
 
 // Fonction qui change l'etoile vide pour la pleine lorsqu'on clique dessus
 function changeImage(x){
-  if(x.innerHTML === "star") {x.innerHTML = "star_outline";}
-  else {x.innerHTML = "star";}
+  
+//  var star = document.getElementById("star");
+//  var star = document.getElementById("star_div");
+
+  if(x.innerHTML === "star" || x.innerHTML === "star_div") {
+    x.innerHTML = "star_outline"; 
+  //  star.style.color = "black";
+
+  }
+  else {
+    x.innerHTML = "star";
+   // star.style.color = "rgb(255,215,0)";
+  }
 }
 
 function showFederaux(){
