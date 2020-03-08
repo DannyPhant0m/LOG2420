@@ -146,8 +146,26 @@ function showProvinciaux(){
 
 }
 
+// Initialisation de variables globales qui seront misent a jour dans les fonctions
+var fed0 = document.getElementById("fed0");
+var fed1 = document.getElementById("fed1");
+var fed2 = document.getElementById("fed2");
+var fed3 = document.getElementById("fed3");
+var fed4 = document.getElementById("fed4");
+var fed5 = document.getElementById("fed5");
+var prov0 = document.getElementById("prov0");
+var prov1 = document.getElementById("prov1");
+var prov2 = document.getElementById("prov2");
+var prov3 = document.getElementById("prov3");
+var prov4 = document.getElementById("prov4");
+var prov5 = document.getElementById("prov5");
+var prov6 = document.getElementById("prov6");
 
+// fed0.addEventListener('click', function() {
+//   window.document.location = 'main.html/' + '?check1=' + 
+// });
 
+// Fonction qui met a jour les checkbox
 function linkCheckBoxes(){
    
   var count = 0;
@@ -155,19 +173,19 @@ function linkCheckBoxes(){
   var firstButton = document.getElementById("firstButton");
   var secondButton = document.getElementById("secondButton");
   
-  var fed0 = document.getElementById("fed0");
-  var fed1 = document.getElementById("fed1");
-  var fed2 = document.getElementById("fed2");
-  var fed3 = document.getElementById("fed3");
-  var fed4 = document.getElementById("fed4");
-  var fed5 = document.getElementById("fed5");
-  var prov0 = document.getElementById("prov0");
-  var prov1 = document.getElementById("prov1");
-  var prov2 = document.getElementById("prov2");
-  var prov3 = document.getElementById("prov3");
-  var prov4 = document.getElementById("prov4");
-  var prov5 = document.getElementById("prov5");
-  var prov6 = document.getElementById("prov6");
+  fed0 = document.getElementById("fed0");
+  fed1 = document.getElementById("fed1");
+  fed2 = document.getElementById("fed2");
+  fed3 = document.getElementById("fed3");
+  fed4 = document.getElementById("fed4");
+  fed5 = document.getElementById("fed5");
+  prov0 = document.getElementById("prov0");
+  prov1 = document.getElementById("prov1");
+  prov2 = document.getElementById("prov2");
+  prov3 = document.getElementById("prov3");
+  prov4 = document.getElementById("prov4");
+  prov5 = document.getElementById("prov5");
+  prov6 = document.getElementById("prov6");
 
   if(fed0.checked == true){count++;}
   if(fed1.checked == true){count++;}
@@ -248,38 +266,152 @@ function changeImage(element) {
   }
 }
 
+// Appelle la fonction setTitles() lorsque la page a fini de load
+document.addEventListener('DOMContentLoaded', function() {
+  setTitles();
+})
+
+// Fonction qui appose les bon titres en fonction de la selection de l'utilisateur sur la page principale
+function setTitles() {
+
+  var checkedBox1 = sessionStorage.getItem("checkbox1");
+  var checkedBox2 = sessionStorage.getItem("checkbox2");
+
+  if(checkedBox1 === "fed0") {document.getElementById("textParti1").innerHTML = "P.L.C.";}
+  if(checkedBox1 === "fed1") {document.getElementById("textParti1").innerHTML = "P.C.C.";}
+  if(checkedBox1 === "fed2") {document.getElementById("textParti1").innerHTML = "B.Q.";}
+  if(checkedBox1 === "fed3") {document.getElementById("textParti1").innerHTML = "N.P.D.";}
+  if(checkedBox1 === "fed4") {document.getElementById("textParti1").innerHTML = "P.V.C.";}
+  if(checkedBox1 === "fed5") {document.getElementById("textParti1").innerHTML = "P.P.C.";}
+
+  if(checkedBox1 === "prov0") {document.getElementById("textParti1").innerHTML = "C.A.Q.";}
+  if(checkedBox1 === "prov1") {document.getElementById("textParti1").innerHTML = "P.L.Q.";}
+  if(checkedBox1 === "prov2") {document.getElementById("textParti1").innerHTML = "P.Q.";}
+  if(checkedBox1 === "prov3") {document.getElementById("textParti1").innerHTML = "P.V.Q.";}
+  if(checkedBox1 === "prov4") {document.getElementById("textParti1").innerHTML = "Q.S.";}
+  if(checkedBox1 === "prov5") {document.getElementById("textParti1").innerHTML = "P.C.Q.";}
+  if(checkedBox1 === "prov6") {document.getElementById("textParti1").innerHTML = "P.I.Q.";}
+
+  if(checkedBox2 === "fed0") {document.getElementById("textParti2").innerHTML = "P.L.C.";}
+  if(checkedBox2 === "fed1") {document.getElementById("textParti2").innerHTML = "P.C.C.";}
+  if(checkedBox2 === "fed2") {document.getElementById("textParti2").innerHTML = "B.Q.";}
+  if(checkedBox2 === "fed3") {document.getElementById("textParti2").innerHTML = "N.P.D.";}
+  if(checkedBox2 === "fed4") {document.getElementById("textParti2").innerHTML = "P.V.C.";}
+  if(checkedBox2 === "fed5") {document.getElementById("textParti2").innerHTML = "P.P.C.";}
+
+  if(checkedBox2 === "prov0") {document.getElementById("textParti2").innerHTML = "C.A.Q.";}
+  if(checkedBox2 === "prov1") {document.getElementById("textParti2").innerHTML = "P.L.Q.";}
+  if(checkedBox2 === "prov2") {document.getElementById("textParti2").innerHTML = "P.Q.";}
+  if(checkedBox2 === "prov3") {document.getElementById("textParti2").innerHTML = "P.V.Q.";}
+  if(checkedBox2 === "prov4") {document.getElementById("textParti2").innerHTML = "Q.S.";}
+  if(checkedBox2 === "prov5") {document.getElementById("textParti2").innerHTML = "P.C.Q.";}
+  if(checkedBox2 === "prov6") {document.getElementById("textParti2").innerHTML = "P.I.Q.";}
+}
+
+// Fonction qui sauvegarde la valeur de la checkbox cochee par l'utilisateur (connaitre)
 function saveInfo() {
 
-  //var count = linkCheckBoxes();
-  var fed0 = document.getElementById("fed0");
-  var fed1 = document.getElementById("fed1");
-  var fed2 = document.getElementById("fed2");
-  var fed3 = document.getElementById("fed3");
-  var fed4 = document.getElementById("fed4");
-  var fed5 = document.getElementById("fed5");
-  var prov0 = document.getElementById("prov0");
-  var prov1 = document.getElementById("prov1");
-  var prov2 = document.getElementById("prov2");
-  var prov3 = document.getElementById("prov3");
-  var prov4 = document.getElementById("prov4");
-  var prov5 = document.getElementById("prov5");
-  var prov6 = document.getElementById("prov6");
-  //sessionStorage.setItem("count", "count");
+  fed0 = document.getElementById("fed0");
+  fed1 = document.getElementById("fed1");
+  fed2 = document.getElementById("fed2");
+  fed3 = document.getElementById("fed3");
+  fed4 = document.getElementById("fed4");
+  fed5 = document.getElementById("fed5");
+  
+  prov0 = document.getElementById("prov0");
+  prov1 = document.getElementById("prov1");
+  prov2 = document.getElementById("prov2");
+  prov3 = document.getElementById("prov3");
+  prov4 = document.getElementById("prov4");
+  prov5 = document.getElementById("prov5");
+  prov6 = document.getElementById("prov6");
 
-  if(fed0.checked == true){sessionStorage.setItem("checkbox", "fed0");}
-  if(fed1.checked == true){sessionStorage.setItem("checkbox", "fed1");}
-  if(fed2.checked == true){sessionStorage.setItem("checkbox", "fed2");}
-  if(fed3.checked == true){sessionStorage.setItem("checkbox", "fed3");}
-  if(fed4.checked == true){sessionStorage.setItem("checkbox", "fed4");}
-  if(fed5.checked == true){sessionStorage.setItem("checkbox", "fed5");}
+  if(fed0.checked){sessionStorage.setItem("checkbox1", "fed0");}
+  if(fed1.checked){sessionStorage.setItem("checkbox1", "fed1");}
+  if(fed2.checked){sessionStorage.setItem("checkbox1", "fed2");}
+  if(fed3.checked){sessionStorage.setItem("checkbox1", "fed3");}
+  if(fed4.checked){sessionStorage.setItem("checkbox1", "fed4");}
+  if(fed5.checked){sessionStorage.setItem("checkbox1", "fed5");}
 
-  if(prov0.checked == true){sessionStorage.setItem("checkbox", "prov0");}
-  if(prov1.checked == true){sessionStorage.setItem("checkbox", "prov1");}
-  if(prov2.checked == true){sessionStorage.setItem("checkbox", "prov2");}
-  if(prov3.checked == true){sessionStorage.setItem("checkbox", "prov3");}
-  if(prov4.checked == true){sessionStorage.setItem("checkbox", "prov4");}
-  if(prov5.checked == true){sessionStorage.setItem("checkbox", "prov5");}
-  if(prov6.checked == true){sessionStorage.setItem("checkbox", "prov6");}
+  if(prov0.checked){sessionStorage.setItem("checkbox1", "prov0");}
+  if(prov1.checked){sessionStorage.setItem("checkbox1", "prov1");}
+  if(prov2.checked){sessionStorage.setItem("checkbox1", "prov2");}
+  if(prov3.checked){sessionStorage.setItem("checkbox1", "prov3");}
+  if(prov4.checked){sessionStorage.setItem("checkbox1", "prov4");}
+  if(prov5.checked){sessionStorage.setItem("checkbox1", "prov5");}
+  if(prov6.checked){sessionStorage.setItem("checkbox1", "prov6");}
 
+  // Change a l'autre page
   document.location = 'propositions_connaitre.html';
+  }
+
+// Fonction qui sauvegarde la valeur des checkbox cochees par l'utilisateur (comparer)
+function saveInfoComp() {
+
+  fed0 = document.getElementById("fed0");
+  fed1 = document.getElementById("fed1");
+  fed2 = document.getElementById("fed2");
+  fed3 = document.getElementById("fed3");
+  fed4 = document.getElementById("fed4");
+  fed5 = document.getElementById("fed5");
+
+  prov0 = document.getElementById("prov0");
+  prov1 = document.getElementById("prov1");
+  prov2 = document.getElementById("prov2");
+  prov3 = document.getElementById("prov3");
+  prov4 = document.getElementById("prov4");
+  prov5 = document.getElementById("prov5");
+  prov6 = document.getElementById("prov6");
+
+  // Checkbox partis federaux
+  if(fed0.checked && fed1.checked){sessionStorage.setItem("checkbox1", "fed0"); sessionStorage.setItem("checkbox2", "fed1");}
+  if(fed0.checked && fed2.checked){sessionStorage.setItem("checkbox1", "fed0"); sessionStorage.setItem("checkbox2", "fed2");}
+  if(fed0.checked && fed3.checked){sessionStorage.setItem("checkbox1", "fed0"); sessionStorage.setItem("checkbox2", "fed3");}
+  if(fed0.checked && fed4.checked){sessionStorage.setItem("checkbox1", "fed0"); sessionStorage.setItem("checkbox2", "fed4");}
+  if(fed0.checked && fed5.checked){sessionStorage.setItem("checkbox1", "fed0"); sessionStorage.setItem("checkbox2", "fed5");}
+
+  if(fed1.checked && fed2.checked){sessionStorage.setItem("checkbox1", "fed1"); sessionStorage.setItem("checkbox2", "fed2");}
+  if(fed1.checked && fed3.checked){sessionStorage.setItem("checkbox1", "fed1"); sessionStorage.setItem("checkbox2", "fed3");}
+  if(fed1.checked && fed4.checked){sessionStorage.setItem("checkbox1", "fed1"); sessionStorage.setItem("checkbox2", "fed4");}
+  if(fed1.checked && fed5.checked){sessionStorage.setItem("checkbox1", "fed1"); sessionStorage.setItem("checkbox2", "fed5");}
+
+  if(fed2.checked && fed3.checked){sessionStorage.setItem("checkbox1", "fed2"); sessionStorage.setItem("checkbox2", "fed3");}
+  if(fed2.checked && fed4.checked){sessionStorage.setItem("checkbox1", "fed2"); sessionStorage.setItem("checkbox2", "fed4");}
+  if(fed2.checked && fed5.checked){sessionStorage.setItem("checkbox1", "fed2"); sessionStorage.setItem("checkbox2", "fed5");}
+
+  if(fed3.checked && fed4.checked){sessionStorage.setItem("checkbox1", "fed3"); sessionStorage.setItem("checkbox2", "fed4");}
+  if(fed3.checked && fed5.checked){sessionStorage.setItem("checkbox1", "fed3"); sessionStorage.setItem("checkbox2", "fed5");}
+
+  if(fed4.checked && fed5.checked){sessionStorage.setItem("checkbox1", "fed4"); sessionStorage.setItem("checkbox2", "fed5");}
+
+  // Checkbox partis provinciaux
+  if(prov0.checked && prov1.checked){sessionStorage.setItem("checkbox1", "prov0"); sessionStorage.setItem("checkbox2", "prov1");}
+  if(prov0.checked && prov2.checked){sessionStorage.setItem("checkbox1", "prov0"); sessionStorage.setItem("checkbox2", "prov2");}
+  if(prov0.checked && prov3.checked){sessionStorage.setItem("checkbox1", "prov0"); sessionStorage.setItem("checkbox2", "prov3");}
+  if(prov0.checked && prov4.checked){sessionStorage.setItem("checkbox1", "prov0"); sessionStorage.setItem("checkbox2", "prov4");}
+  if(prov0.checked && prov5.checked){sessionStorage.setItem("checkbox1", "prov0"); sessionStorage.setItem("checkbox2", "prov5");}
+  if(prov0.checked && prov6.checked){sessionStorage.setItem("checkbox1", "prov0"); sessionStorage.setItem("checkbox2", "prov6");}
+
+  if(prov1.checked && prov2.checked){sessionStorage.setItem("checkbox1", "prov1"); sessionStorage.setItem("checkbox2", "prov2");}
+  if(prov1.checked && prov3.checked){sessionStorage.setItem("checkbox1", "prov1"); sessionStorage.setItem("checkbox2", "prov3");}
+  if(prov1.checked && prov4.checked){sessionStorage.setItem("checkbox1", "prov1"); sessionStorage.setItem("checkbox2", "prov4");}
+  if(prov1.checked && prov5.checked){sessionStorage.setItem("checkbox1", "prov1"); sessionStorage.setItem("checkbox2", "prov5");}
+  if(prov1.checked && prov6.checked){sessionStorage.setItem("checkbox1", "prov1"); sessionStorage.setItem("checkbox2", "prov6");}
+
+  if(prov2.checked && prov3.checked){sessionStorage.setItem("checkbox1", "prov2"); sessionStorage.setItem("checkbox2", "prov3");}
+  if(prov2.checked && prov4.checked){sessionStorage.setItem("checkbox1", "prov2"); sessionStorage.setItem("checkbox2", "prov4");}
+  if(prov2.checked && prov5.checked){sessionStorage.setItem("checkbox1", "prov2"); sessionStorage.setItem("checkbox2", "prov5");}
+  if(prov2.checked && prov6.checked){sessionStorage.setItem("checkbox1", "prov2"); sessionStorage.setItem("checkbox2", "prov6");}
+
+  if(prov3.checked && prov4.checked){sessionStorage.setItem("checkbox1", "prov3"); sessionStorage.setItem("checkbox2", "prov4");}
+  if(prov3.checked && prov5.checked){sessionStorage.setItem("checkbox1", "prov3"); sessionStorage.setItem("checkbox2", "prov5");}
+  if(prov3.checked && prov6.checked){sessionStorage.setItem("checkbox1", "prov3"); sessionStorage.setItem("checkbox2", "prov6");}
+
+  if(prov4.checked && prov5.checked){sessionStorage.setItem("checkbox1", "prov4"); sessionStorage.setItem("checkbox2", "prov5");}
+  if(prov4.checked && prov6.checked){sessionStorage.setItem("checkbox1", "prov4"); sessionStorage.setItem("checkbox2", "prov6");}
+
+  if(prov5.checked && prov6.checked){sessionStorage.setItem("checkbox1", "prov5"); sessionStorage.setItem("checkbox2", "prov6");}
+
+  // Change a l'autre page
+  document.location = 'propositions_comparer.html';
   }
