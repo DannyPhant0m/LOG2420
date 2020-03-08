@@ -110,6 +110,11 @@ function switchRadio_1() {
   } 
 }
 
+// Fonction qui change l'etoile vide pour la pleine lorsqu'on clique dessus
+function changeImage(x){
+  if(x.innerHTML === "star") {x.innerHTML = "star_outline";}
+  else {x.innerHTML = "star";}
+}
 
 function showFederaux(){
   var firstRadio = document.getElementById("firstRadio");
@@ -127,7 +132,6 @@ function showFederaux(){
   }
 
 }
-
 
 function showProvinciaux(){
   var secondRadio = document.getElementById("secondRadio");
@@ -242,29 +246,6 @@ $('input[type=checkbox]').click(function() {
     $('.buttonFun').prop('disabled', true);
   }
 });
-
-
-// document.getElementById("star1").onclick = function() {
-//   Image.src("etoile.png") = this.src;
-// }
-
-// document.getElementById("star").onclick = function() {
-//   Image.src("etoile.png") = this.src;
-// }
-
-
-function changeImage(element) {
-
-  if (element.src == "star1.png") 
-  {      
-    console.log(element.src);
-      element.src = "etoile.png";
-  }
-  else 
-  {
-      element.src = "star1.png";
-  }
-}
 
 // Appelle la fonction setTitles() lorsque la page a fini de load
 document.addEventListener('DOMContentLoaded', function() {

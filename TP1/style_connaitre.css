@@ -102,16 +102,15 @@ body {
     top:29px;
 
 }
+#star_outline{
+    cursor: pointer;
+}
 
-
-#star1{
+#star_div{
     text-align: right;
     top:-3px;
-    right: 60px;
+    right: 31px;
     position: relative;
-    cursor:pointer;
-    
-
 }
 .container-fluid {
     border-width: 0px;
